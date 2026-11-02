@@ -1,12 +1,8 @@
-# Co.Solutions — brand tokens (v1.0, updated 12 Oct 2026)
+# Co.Solutions brand tokens (v1.0)
 
-Owner: Kerollos. Built in the identity chat from `claude/cosolutions-brand-brief.md`. This is the hand-off for the landing-page chat: build the site from this file.
+**Direction:** *Overlap × Ledger Teal.* The logo's dot is two overlapping squares, one for us and one for the agency. The overlap, where the solution happens, is the accent colour. The dot over the *i* in "Solutions" is a square in that same colour.
 
-**Locked direction:** *Overlap × Ledger Teal.* The logo's dot is two overlapping squares, one for us and one for the agency. The overlap, where the solution happens, is the accent colour. The dot over the *i* in "Solutions" is a square in that same colour.
-
-Full reference: `Co.Solutions-Brand-Guidelines-v1.0.pdf` (38 pages) in the brand folder.
-
-**Logo decision (12 Oct):** only the full-colour logo exists. No black, white or reversed versions. The logo always sits on a light ground (`surface` or `bg`). App icon, avatar and favicons are the colour symbol on `bg` (light).
+**Logo:** only the full-colour logo exists. There are no black, white or reversed versions. The logo always sits on a light ground (`surface` or `bg`). App icon, avatar and favicons are the colour symbol on `bg` (light).
 
 ## 1. Colour tokens (light, default)
 
@@ -20,7 +16,7 @@ Full reference: `Co.Solutions-Brand-Guidelines-v1.0.pdf` (38 pages) in the brand
 | `accent` | `#0B6970` | Primary button, links, headline key word, logo overlap | white on accent 6.4:1 · accent on bg 5.9:1 |
 | `tint` | `#9BD5D2` | Second logo square, soft fills/highlights. **Never text.** | ink on tint 10.2:1 |
 | `leak` | `#B4532A` | Warnings, negative numbers | on surface 5.0:1 · on bg 4.6:1 |
-| `accent-on-dark` | `#5FC4C9` | Accent on ink/dark backgrounds, overlap in reversed logo | on ink 8.1:1 |
+| `accent-on-dark` | `#5FC4C9` | Accent on ink/dark backgrounds | on ink 8.1:1 |
 
 There is no separate `positive` token: positive uses `accent`. Everything passes WCAG AA for normal text.
 
@@ -34,7 +30,7 @@ There is no separate `positive` token: positive uses `accent`. Everything passes
 }
 ```
 
-## 2. Typography (all Google Fonts, OFL; self-host)
+## 2. Typography (all Google Fonts, OFL)
 
 | Use | Google Fonts name | Settings / weights |
 |---|---|---|
@@ -47,15 +43,14 @@ There is no separate `positive` token: positive uses `accent`. Everything passes
 ```
 https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,800&family=Instrument+Serif:ital@1&family=Geist:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap
 ```
-(Arabic later: `family=IBM+Plex+Sans+Arabic:wght@400;600;700`)
 
 ## 3. Rules
 
-- **The dot:** in the logo, the dot is always the overlap mark and never a plain period. In running text, type "Co.Solutions" with a normal dot. "HQ" never appears outside the domain.
+- **The dot:** in the logo, the dot is always the overlap mark and never a plain period. In running text, type "Co.Solutions" with a normal dot.
 - **Overlap colour = i-dot colour:** both are always Ledger Teal `accent`.
 - **Logo grounds:** `surface` or `bg` only. Never on tint, accent, ink or photos (give it a light panel instead).
 - **Accent word:** use at most **one** word per headline, set in Instrument Serif Italic and coloured `accent`. Pick the word that carries the promise, e.g. "Is your agency *profitable?*"
-- **Accent budget:** teal does one job per screen (main button, key word, mark). Everything else uses ink, muted and line, so the white-label client colours in the product demo stay the hero.
+- **Accent budget:** teal does one job per screen (main button, key word, mark). Everything else uses ink, muted and line, so the white-label client colours in the product stay the hero.
 - **Clear space:** keep one square of the mark (its height) clear on every side.
 - **Minimum size:**
   - Wordmark: at least 96 px wide on screen, 25 mm in print.
@@ -66,34 +61,15 @@ https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75,800&family=Instrum
   - No gradients or shadows on the logo, and no busy photos behind it.
   - Never use `leak` as a brand colour.
   - Never write "CO Solutions", "Cosolutions" or "Co Solutions".
-  - Never use any Crée font, colour or logo.
 
-## 4. Colour names (used in the guidelines)
+## 4. Colour names
 Ink `#132024` · Ledger Teal `#0B6970` · Shallow Teal `#9BD5D2` · Mist `#F3F6F6` · Paper `#FFFFFF` · Slate `#5A6A6E` · Rule `#D9E1E2` · Leak `#B4532A` · Signal Teal `#5FC4C9` (accent word on Ink only).
 
-## 5. Files
+## 5. Files in this repository
 
-Saved on the owner's computer at `C:\Users\HP\Documents\claude work\cree-erp\_COSOLUTIONS-BRAND\`. The wordmark is outlined from Archivo (wdth 75 / wght 800), so it needs no font to render.
-
-| Folder | Contents |
+| Path | Contents |
 |---|---|
-| `Co.Solutions-Brand-Guidelines-v1.0.pdf` | The full brand guidelines |
-| `logo/` | `cosolutions-logo-color.svg`, `@2x.png` (1200 px), `@4x.png` (2400 px) |
-| `symbol/` | `cosolutions-symbol-color.svg`, `cosolutions-symbol-color-512.png` |
-| `icons/` | `cosolutions-app-icon.svg` + `-512/-192.png`, `apple-touch-icon-180.png`, `cosolutions-avatar.svg` + `-1024.png`, `favicon-32.svg` (use as `favicon.svg`), `favicon-32.png`, `favicon-16.png` |
-| `print/` | Business card front/back (85×55 mm, 3 mm bleed), A4 letterhead blank + sample (PDF) |
-| `social/` | LinkedIn company cover 1128×191, founder banner 1584×396, post templates (question, number, carousel cover) 1080×1350, video-call background 1920×1080 |
-| `slides/` | Title, section, content, closing masters 1920×1080 |
-| `web/` | `cosolutions-og-1200x630.png`, `email-signature-for-gmail.html`, signature preview |
-| `graphics/` | `cosolutions-pattern-ledger-grid.svg`, pillar icons (`icon-work-time`, `icon-clients-pipeline`, `icon-finance`, `icon-insights`) |
-| `fonts/` | Archivo and Geist variable fonts + OFL licences |
-| `_archive-v0/` | Yesterday's first exports, incl. retired black/white/reversed versions. Do not use. |
-
-```html
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"> <!-- = icons/favicon-32.svg -->
-<link rel="icon" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
-<meta property="og:image" content="/cosolutions-og-1200x630.png">
-```
-
-Out of scope for v1: brand book, patterns, illustration style, stationery, social templates.
+| `assets/brand/cosolutions-logo-color.svg` | Full-colour wordmark (outlined, needs no font) |
+| `assets/brand/cosolutions-symbol-color.svg` | Colour symbol |
+| `assets/brand/cosolutions-og-1200x630.png` | Social sharing image |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon-180.png` | Favicons |
