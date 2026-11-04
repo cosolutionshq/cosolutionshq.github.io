@@ -4,7 +4,7 @@
 const CONFIG = {
   // WhatsApp number that receives demo requests.
   // Digits only, with the country code, no "+" or spaces. Example: 201012345678
-  whatsapp: "WHATSAPP_NUMBER",
+  whatsapp: "201207548813",
   messages: {
     demo: "Hi Co.Solutions, I'd like a demo of the agency system.",
     question: "Hi Co.Solutions, I have a question about the agency system."

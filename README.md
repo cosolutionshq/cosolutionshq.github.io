@@ -8,7 +8,7 @@ Static site published by GitHub Pages at <https://cosolutionshq.github.io/>. Pla
 |---|---|
 | `index.html` | The landing page |
 | `privacy.html` | Privacy page |
-| `404.html` | Not-found page. At `/demo/` it shows a holding message until the product tour is published there. |
+| `404.html` | Not-found page |
 | `assets/site.js` | The only script: WhatsApp links, mobile menu, product tabs, brand switcher |
 | `assets/fonts/` | Self-hosted fonts (Archivo, Instrument Serif, Geist, IBM Plex Mono) with their OFL licences |
 | `assets/screens/` | Original product screenshots |
