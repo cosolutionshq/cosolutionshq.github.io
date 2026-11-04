@@ -1,0 +1,126 @@
+/* Co.Solutions design tokens. The one place for colour, type, spacing, radius, elevation and motion.
+   Colours come from assets/brand/cosolutions-brand-tokens.md. See docs/DESIGN.md for how they are used. */
+
+@font-face{font-family:"Archivo";font-style:normal;font-weight:800;font-stretch:75%;font-display:swap;src:url(fonts/archivo-condensed-800-latin.woff2) format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/instrument-serif-italic-latin.woff2) format("woff2")}
+@font-face{font-family:"Geist";font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/geist-latin.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-mono-400-latin.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-mono-500-latin.woff2) format("woff2")}
+
+:root{
+  /* Layout */
+  --container:1200px;
+  --measure:720px;
+  --gutter:clamp(20px,5vw,48px);
+  --gap:16px;
+  --header-h:56px;
+
+  /* Spacing: 8-point, with a 4 for fine work */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+  --space-9:96px;
+  --space-10:128px;
+  --section-y:clamp(64px,9vw,128px);
+  --head-gap:var(--space-6);
+  --card-pad:var(--space-5);
+
+  /* Type: fluid between 360 px and 1440 px */
+  --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --font-accent:"Instrument Serif",Georgia,serif;
+  --font-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+
+  --text-display:clamp(2.5rem,1.833rem + 2.963vw,4.5rem);
+  --text-h2:clamp(1.875rem,1.5rem + 1.667vw,3rem);
+  --text-h3:clamp(1.25rem,1.167rem + .37vw,1.5rem);
+  --text-lead:clamp(1.125rem,1.0625rem + .278vw,1.3125rem);
+  --text-body:clamp(1rem,.979rem + .093vw,1.0625rem);
+  --text-small:clamp(.8125rem,.792rem + .093vw,.875rem);
+  --text-eyebrow:.8125rem;
+
+  /* Brand colours (raw; sections use the semantic tokens below) */
+  --ink:#132024;
+  --mist:#F3F6F6;
+  --paper:#FFFFFF;
+  --slate:#5A6A6E;
+  --rule:#D9E1E2;
+  --teal:#0B6970;
+  --shallow:#9BD5D2;
+  --signal:#5FC4C9;
+  --leak:#B4532A;
+  --dark-bg:#0F1A1D;
+  --dark-surface:#17262A;
+  --dark-line:#26383D;
+  --dark-text:#E8EFEF;
+  --dark-muted:#9DB0B3;
+
+  /* Semantic colours */
+  --bg:var(--mist);
+  --surface:var(--paper);
+  --surface-raised:var(--paper);
+  --border:var(--rule);
+  --text:var(--ink);
+  --text-muted:var(--slate);
+  --accent:var(--teal);
+  --accent-contrast:var(--paper);
+  --accent-hover:var(--ink);
+  --highlight:rgb(155 213 210 / .24);
+  --focus:var(--teal);
+  --header-glass:rgb(243 246 246 / .86);
+  --scrim:rgb(19 32 36 / .5);
+
+  /* Radius */
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:20px;
+
+  /* Elevation: two levels only, tinted with ink */
+  --shadow-1:0 1px 2px rgb(19 32 36 / .04),0 4px 16px rgb(19 32 36 / .04);
+  --shadow-2:0 2px 6px rgb(19 32 36 / .05),0 24px 56px -20px rgb(19 32 36 / .2);
+
+  /* Sizes */
+  --hairline:1px;
+  --icon:24px;
+  --icon-btn:20px;
+  --btn-h:52px;
+  --tap:48px;
+  --logo-h:20px;
+  --dot:8px;
+  --line-w:2px;
+  --sheet-w:420px;
+  --glass-blur:12px;
+
+  /* Motion */
+  --dur-fast:180ms;
+  --dur-base:260ms;
+  --dur-reveal:300ms;
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --reveal-y:14px;
+}
+
+@media (min-width:768px){
+  :root{--gap:20px;--head-gap:var(--space-7);--card-pad:var(--space-6);--header-h:64px;--btn-h:48px;--logo-h:22px}
+}
+@media (min-width:1024px){
+  :root{--gap:24px}
+}
+
+/* A dark band re-maps the semantic tokens; components inside need no changes. */
+.on-dark{
+  --bg:var(--ink);
+  --surface:var(--dark-surface);
+  --surface-raised:var(--dark-surface);
+  --border:var(--dark-line);
+  --text:var(--dark-text);
+  --text-muted:var(--dark-muted);
+  --accent:var(--signal);
+  --accent-contrast:var(--dark-bg);
+  --accent-hover:var(--dark-text);
+  --focus:var(--signal);
+}
