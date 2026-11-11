@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -30,373 +30,515 @@
 </script>
 <link rel="preload" href="assets/fonts/archivo-condensed-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="assets/screens/web/pulse-desktop-1400.webp" imagesrcset="assets/screens/web/pulse-desktop-800.webp 800w, assets/screens/web/pulse-desktop-1400.webp 1400w, assets/screens/web/pulse-desktop-2200.webp 2200w" imagesizes="(min-width: 1296px) 1200px, calc(100vw - 96px)" media="(min-width: 768px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/screens/web/pulse-mobile-780.webp" imagesrcset="assets/screens/web/pulse-mobile-390.webp 390w, assets/screens/web/pulse-mobile-780.webp 780w" imagesizes="calc(100vw - 40px)" media="(max-width: 767px)" fetchpriority="high">
-<link rel="stylesheet" href="assets/tokens.css">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/landing.css">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="header">
-  <div class="container header-in">
+<header class="header" data-header>
+  <div class="wrap header-in">
     <a class="logo" href="#top"><img src="assets/brand/cosolutions-logo-color.svg" width="149" height="22" alt="Co.Solutions, back to top"></a>
     <nav class="nav" aria-label="Page sections">
-      <a href="#product">Product</a>
-      <a href="#how">How it works</a>
-      <a href="#security">Security</a>
-      <a href="#faq">FAQ</a>
+      <a href="#product" data-spy="product">Product</a>
+      <a href="#how" data-spy="how">How it works</a>
+      <a href="#security" data-spy="security">Security</a>
+      <a href="#faq" data-spy="faq">FAQ</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener" aria-label="Request a demo on WhatsApp"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg><span class="demo-short">Demo</span><span class="demo-long">Request a demo</span></a>
-      <button class="icon-btn no-js-hide" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+      <a class="header-link" href="demo/">Explore the product</a>
+      <a class="btn btn-primary" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a>
+      <button class="menu-btn" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button>
     </div>
   </div>
 </header>
 
 <dialog class="sheet" id="sheet" aria-label="Menu">
-  <div class="sheet-in">
-    <div class="sheet-top">
-      <img src="assets/brand/cosolutions-logo-color.svg" width="149" height="22" alt="Co.Solutions">
-      <button class="icon-btn" type="button" id="sheetClose" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
-    </div>
-    <nav aria-label="Menu sections">
-      <a href="#product">Product</a>
-      <a href="#how">How it works</a>
-      <a href="#security">Security</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="btn-row"><a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a><a class="btn btn-secondary" href="demo/">Explore the product<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  <div class="sheet-top">
+    <img src="assets/brand/cosolutions-logo-color.svg" width="149" height="22" alt="Co.Solutions">
+    <button class="sheet-close" type="button" id="sheetClose" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav aria-label="Menu sections">
+    <a href="#product" data-spy="product"><span class="n">01</span><span class="l">Product</span></a>
+    <a href="#how" data-spy="how"><span class="n">02</span><span class="l">How it works</span></a>
+    <a href="#security" data-spy="security"><span class="n">03</span><span class="l">Security</span></a>
+    <a href="#faq" data-spy="faq"><span class="n">04</span><span class="l">FAQ</span></a>
+  </nav>
+  <div class="sheet-ctas">
+    <a class="btn btn-primary btn-block" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo on WhatsApp</a>
+    <a class="btn btn-line btn-block" href="demo/">Explore the product</a>
   </div>
 </dialog>
 
 <main id="main">
-
 <section class="hero" id="top" aria-labelledby="hero-h">
-  <div class="container">
-    <p class="eyebrow">For marketing agencies &amp; business consultancies in Egypt, KSA and UAE</p>
-    <h1 class="t-display" id="hero-h">Your agency is busy.<br>Is it <span class="accent-word">profitable?</span></h1>
-    <p class="t-lead">One system, under your brand, that shows your profit, capacity and pipeline as they happen. Set up with your data, live in about 4 weeks.</p>
-    <div class="btn-row"><a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a><a class="btn btn-secondary" href="demo/">Explore the product<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-    <ul class="trust">
-      <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Built inside a working agency</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Set up with your data</li>
-      <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No per-seat fees</li>
-    </ul>
-    <div class="hero-visual">
-      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/pulse-mobile-390.webp 390w, assets/screens/web/pulse-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="918"><img src="assets/screens/web/pulse-desktop-1400.webp" srcset="assets/screens/web/pulse-desktop-800.webp 800w, assets/screens/web/pulse-desktop-1400.webp 1400w, assets/screens/web/pulse-desktop-2200.webp 2200w" sizes="(min-width: 1296px) 1200px, calc(100vw - 96px)" width="2200" height="1375" fetchpriority="high" decoding="async" alt="The Pulse dashboard with sample data from a fictional agency: net profit 47K USD, down 22K, at a 12% margin against a 15% target; utilisation 88%; on-time delivery 77%; and a ranked list of what needs attention, including two clients whose margins turned negative."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-      <div class="leak-card"><i aria-hidden="true"></i><p><b>Two clients slipped into loss</b><span>Flagged on the first screen, not at year end.</span></p></div>
+  <div class="hero-pattern" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-top">
+      <p class="for"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>For marketing agencies &amp; business consultancies in Egypt, KSA and UAE</p>
+      <h1 class="display" id="hero-h"><span>Your agency is busy.</span><span>Is it <em class="em">profitable?</em></span></h1>
+    </div>
+    <div class="hero-cardwrap">
+    <div class="hc-outer" data-hero data-states='[{"name":"Palm Grove Hotels","oct":55,"sep":54.2},{"name":"Azure Dental Clinics","oct":40,"sep":38.8},{"name":"Nile Coffee Roasters","oct":59,"sep":null}]'>
+      <div class="hc-rise">
+      <figure class="hc fam-money" role="group" aria-label="Sample data, fictional agency. Margin on fee earned by client, October 2026 against September: Palm Grove Hotels 55% (54% in September), Azure Dental Clinics 40% (39%), Nile Coffee Roasters 59% (no September margin). Every client is healthy.">
+        <div class="card-head">
+          <div class="plate"><span class="eye">Money · Oct 2026 vs Sep</span><span class="title">Margin by client</span></div>
+          <div class="chip"><i class="sq"></i><span class="fig" aria-hidden="true" data-hc-fig>59%</span><span class="cap"><b data-hc-name>Nile Coffee Roasters</b><span>Margin on fee earned</span></span></div>
+        </div>
+        <div class="hc-body" aria-hidden="true">
+          <div class="hc-legend"><span class="hc-keys"><span><i class="key-now"></i>October</span><span><i class="key-was"></i>September, for comparison</span></span><span class="pill">Healthy</span></div>
+          <div class="hc-row" data-row>
+          <span class="name">Palm Grove Hotels</span>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:49.273%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:50.000%"></i><span class="hc-val" style="inset-inline-start:calc(81.818% + 8px)">55%</span></div>
+        </div>
+          <div class="hc-row" data-row>
+          <span class="name">Azure Dental Clinics</span>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:35.273%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:36.364%"></i><span class="hc-val" style="inset-inline-start:calc(68.182% + 8px)">40%</span></div>
+        </div>
+          <div class="hc-row is-on" data-row>
+          <span class="name">Nile Coffee Roasters</span>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost" style="inset-inline-start:31.818%;width:0.000%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:53.636%"></i><span class="hc-val" style="inset-inline-start:calc(85.455% + 8px)">59%</span></div>
+        </div>
+          <div class="hc-axis" aria-hidden="true"><span class="sp"></span><div class="hc-ticks"><span class="t-mid" style="inset-inline-start:13.6%">−20</span><span style="inset-inline-start:31.8%">0</span><span class="t-mid" style="inset-inline-start:68.2%">+40</span><span style="inset-inline-start:86.4%">+60%</span></div></div>
+        </div>
+        <div class="card-foot"><span class="note">Sample data · fictional agency</span><a href="demo/admin/insights/clients">Open Clients <span class="arr" aria-hidden="true">→</span></a></div>
+      </figure>
+      <div class="callout is-on" data-callout aria-hidden="true"><i class="square"></i><b>Every client healthy in October</b><span>Checked every month, not at year end.</span></div>
+      </div>
+      <div class="segs" role="group" aria-label="Sample clients">
+        <button type="button" class="seg" aria-pressed="false" data-seg="0"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Palm Grove Hotels</span></button>
+        <button type="button" class="seg" aria-pressed="false" data-seg="1"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Azure Dental Clinics</span></button>
+        <button type="button" class="seg" aria-pressed="true" data-seg="2"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Nile Coffee Roasters</span></button>
+      </div>
+    </div>
+    </div>
+    <div class="hero-body">
+      <p class="hero-lead">One system, under your brand, that shows your profit, capacity and pipeline as they happen. Set up with your data, live in about 4 weeks.</p>
+      <div class="hero-ctas" data-hero-ctas>
+        <a class="btn btn-primary" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo on WhatsApp</a>
+        <a class="btn btn-line" href="demo/">Explore the product</a>
+      </div>
+      <ul class="trust"><li>Built inside a working agency</li><li>Set up with your data</li><li>No per-seat fees</li></ul>
     </div>
   </div>
 </section>
 
-<section class="section section--surface" id="product" aria-labelledby="q-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">The problem</p><h2 class="t-h2" id="q-h">Can you answer these in ten seconds?</h2><p class="t-lead">If not, you're running your agency on guesswork. The answers exist, but they're spread across task tools, timesheets, invoices and spreadsheets that don't talk to each other.</p></div>
-    <ol class="acc reveal">
-<li class="acc-item is-open" id="q1">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="q1-btn" aria-expanded="true" aria-controls="q1-panel"><span class="acc-num">01</span><span class="acc-q t-h3">Which client makes you the most money, and which one costs you money?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="q1-panel" role="region" aria-labelledby="q1-btn"><div class="acc-clip"><div class="acc-body grid">
-    <div class="col-5">
+<section class="dark problem" id="product" aria-labelledby="q-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="head-l"><p class="eyebrow">The problem</p><h2 class="display" id="q-h">Can you answer these in ten <em class="em">seconds?</em></h2></div>
+      <p class="lead"><b>If not, you’re running your agency on guesswork.</b> The answers exist, but they’re spread across task tools, timesheets, invoices and spreadsheets that don’t talk to each other.</p>
+    </div>
+    <ol class="qlist">
+      <li><a href="#a1" style="--dk:var(--money-dk)"><span class="qn">01</span><span class="qt">Which client makes you the most money, and which one costs you money?</span><span class="qf">Clients <span class="qd" aria-hidden="true">↓</span></span><span class="qc" aria-hidden="true">↓</span></a></li>
+      <li><a href="#a2" style="--dk:var(--money-dk)"><span class="qn">02</span><span class="qt">How much did revisions and rework cost you last month?</span><span class="qf">Profit leaks <span class="qd" aria-hidden="true">↓</span></span><span class="qc" aria-hidden="true">↓</span></a></li>
+      <li><a href="#a3" style="--dk:var(--people-dk)"><span class="qn">03</span><span class="qt">Can you take on a new client next month without burning out the team?</span><span class="qf">Capacity <span class="qd" aria-hidden="true">↓</span></span><span class="qc" aria-hidden="true">↓</span></a></li>
+      <li><a href="#a4" style="--dk:var(--pipe-dk)"><span class="qn">04</span><span class="qt">How much revenue is coming in over the next six months?</span><span class="qf">Forecast <span class="qd" aria-hidden="true">↓</span></span><span class="qc" aria-hidden="true">↓</span></a></li>
+      <li><a href="#a5" style="--dk:var(--time-dk)"><span class="qn">05</span><span class="qt">Where is late work stuck, and who is it waiting on?</span><span class="qf">Delivery <span class="qd" aria-hidden="true">↓</span></span><span class="qc" aria-hidden="true">↓</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="answers wrap" aria-label="The answers, in the sample agency">
+  <article class="answer" id="a1">
+    <div class="answer-head">
+      <h3><span class="num">01</span><span>Which client makes you the most money, and which one costs you money?</span></h3>
       <p class="answer-title">See what each client is really worth.</p>
-      <p class="answer"><span class="t-small">In the sample agency</span><b>Aerona Airways</b> brings in the most: 117,600 USD, 31% of September's fees. <b>Wadi Motors</b> costs money: its margin fell to −19%.</p>
-      <p class="answer-shows">Fee, hours, effective rate and margin for every client, how much of your income rests on one client, and the revenue at risk in the next 60 days.</p>
-      <div class="decision"><span class="t-small">The decision it enables</span><b>Who needs a call from you this week.</b></div>
-      <p class="answer-link"><a class="link-arrow" href="demo/admin/insights/clients">Explore this screen in the tour<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>Palm Grove Hotels</b> brings in the most: 39,864 USD, 52% of October’s fees. <b>Azure Dental Clinics</b> earns the least per hour: 143 USD, at a 40% margin.</p></div>
     </div>
-    <figure class="frame col-7"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/clients-mobile-390.webp 390w, assets/screens/web/clients-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="738"><img src="assets/screens/web/clients-panel-800.webp" srcset="assets/screens/web/clients-panel-800.webp 800w, assets/screens/web/clients-panel-1600.webp 1600w" sizes="(min-width: 1280px) 684px, (min-width: 1024px) 56vw, calc(100vw - 96px)" width="1600" height="1035" fetchpriority="low" decoding="async" alt="The Clients dashboard with sample data from a fictional agency: 16 active clients; the biggest, Aerona Airways, is 31% of fees against a 25% limit; and a scorecard of fee, cash collected and hours for each client."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-  </div></div></div>
-</li>
-<li class="acc-item" id="q2">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="q2-btn" aria-expanded="false" aria-controls="q2-panel"><span class="acc-num">02</span><span class="acc-q t-h3">How much did revisions and rework cost you last month?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="q2-panel" role="region" aria-labelledby="q2-btn"><div class="acc-clip"><div class="acc-body grid">
-    <div class="col-5">
-      <p class="answer-title">See where profit leaks.</p>
-      <p class="answer"><span class="t-small">In the sample agency</span><b>57K USD</b>, 15% of revenue, went to work nobody paid for. Extra revision rounds alone cost <b>22K USD</b>.</p>
-      <p class="answer-shows">Every hour is tracked against every fee. You see which projects run over, which clients cost you extra revision rounds, and how much paid time sits idle.</p>
-      <div class="decision"><span class="t-small">The decision it enables</span><b>Which retainer to reprice, and which scope to cap.</b></div>
-      <p class="answer-link"><a class="link-arrow" href="demo/admin/insights/profit">Explore this screen in the tour<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-    </div>
-    <figure class="frame col-7"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/profit-mobile-390.webp 390w, assets/screens/web/profit-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="738"><img src="assets/screens/web/profit-panel-800.webp" srcset="assets/screens/web/profit-panel-800.webp 800w, assets/screens/web/profit-panel-1600.webp 1600w" sizes="(min-width: 1280px) 684px, (min-width: 1024px) 56vw, calc(100vw - 96px)" width="1600" height="1035" loading="lazy" decoding="async" alt="The Profit leaks dashboard with sample data from a fictional agency: 57K USD leaked in September 2026, 15% of revenue against a 10% target, and a chart stepping down from 395K USD revenue through costs, over-used projects and extra revisions."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-  </div></div></div>
-</li>
-<li class="acc-item" id="q3">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="q3-btn" aria-expanded="false" aria-controls="q3-panel"><span class="acc-num">03</span><span class="acc-q t-h3">Can you take on a new client next month without burning out the team?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="q3-panel" role="region" aria-labelledby="q3-btn"><div class="acc-clip"><div class="acc-body grid">
-    <div class="col-5">
-      <p class="answer-title">Know your capacity before you say yes.</p>
-      <p class="answer"><span class="t-small">In the sample agency</span><b>Not without help.</b> Weeks 47 to 49 already run over capacity, and 14 of the 29 people are above 90% of theirs.</p>
-      <p class="answer-shows">Free hours for the next 12 weeks, per team and per person, including the work your pipeline is about to bring in.</p>
-      <div class="decision"><span class="t-small">The decision it enables</span><b>When to take the new client, and when to hire.</b></div>
-      <p class="answer-link"><a class="link-arrow" href="demo/admin/insights/capacity">Explore this screen in the tour<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-    </div>
-    <figure class="frame col-7"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/capacity-mobile-390.webp 390w, assets/screens/web/capacity-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="828"><img src="assets/screens/web/capacity-panel-800.webp" srcset="assets/screens/web/capacity-panel-800.webp 800w, assets/screens/web/capacity-panel-1600.webp 1600w" sizes="(min-width: 1280px) 684px, (min-width: 1024px) 56vw, calc(100vw - 96px)" width="1600" height="1035" loading="lazy" decoding="async" alt="The Capacity dashboard with sample data from a fictional agency: 4,768 hours of capacity, 4,260 logged, 88% utilisation, and a forward load chart with weeks 43, 47, 48 and 49 over capacity."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-  </div></div></div>
-</li>
-<li class="acc-item" id="q4">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="q4-btn" aria-expanded="false" aria-controls="q4-panel"><span class="acc-num">04</span><span class="acc-q t-h3">How much revenue is coming in over the next six months?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="q4-panel" role="region" aria-labelledby="q4-btn"><div class="acc-clip"><div class="acc-body grid">
-    <div class="col-5">
-      <p class="answer-title">See revenue before it lands.</p>
-      <p class="answer"><span class="t-small">In the sample agency</span><b>468K USD</b> from 5 deals, weighted by their chance of winning. 5 of the next 6 months fall short of the 450K USD monthly target.</p>
-      <p class="answer-shows">Every open deal, weighted by its chance of winning, placed in the month it should start and set against your revenue target.</p>
-      <div class="decision"><span class="t-small">The decision it enables</span><b>When to push for new business, and how hard.</b></div>
-      <p class="answer-link"><a class="link-arrow" href="demo/admin/crm/forecast">Explore this screen in the tour<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-    </div>
-    <figure class="frame col-7"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/forecast-mobile-390.webp 390w, assets/screens/web/forecast-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="683"><img src="assets/screens/web/forecast-panel-800.webp" srcset="assets/screens/web/forecast-panel-800.webp 800w, assets/screens/web/forecast-panel-1600.webp 1600w" sizes="(min-width: 1280px) 684px, (min-width: 1024px) 56vw, calc(100vw - 96px)" width="1600" height="1035" loading="lazy" decoding="async" alt="The Forecast dashboard with sample data from a fictional agency: a weighted forecast of 468K USD from 5 deals, 856K USD in open pipeline, a 75% win rate, and expected revenue by month against a 450K USD monthly target."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-  </div></div></div>
-</li>
-<li class="acc-item" id="q5">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="q5-btn" aria-expanded="false" aria-controls="q5-panel"><span class="acc-num">05</span><span class="acc-q t-h3">Where is late work stuck, and who is it waiting on?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="q5-panel" role="region" aria-labelledby="q5-btn"><div class="acc-clip"><div class="acc-body grid">
-    <div class="col-5">
-      <p class="answer-title">See where work waits.</p>
-      <p class="answer"><span class="t-small">In the sample agency</span><b>With the client.</b> 36 of 154 tasks were late, and work sat in client review for 5.3 working days against a 2-day target.</p>
-      <p class="answer-shows">Your on-time rate, your revision rounds, and how many days work sits at each stage, including days spent waiting on the client.</p>
-      <div class="decision"><span class="t-small">The decision it enables</span><b>Which step to fix, and which client conversation to have.</b></div>
-      <p class="answer-link"><a class="link-arrow" href="demo/admin/insights/delivery">Explore this screen in the tour<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
-    </div>
-    <figure class="frame col-7"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><picture><source media="(max-width: 767px)" srcset="assets/screens/web/delivery-mobile-390.webp 390w, assets/screens/web/delivery-mobile-780.webp 780w" sizes="calc(100vw - 40px)" width="780" height="648"><img src="assets/screens/web/delivery-panel-800.webp" srcset="assets/screens/web/delivery-panel-800.webp 800w, assets/screens/web/delivery-panel-1600.webp 1600w" sizes="(min-width: 1280px) 684px, (min-width: 1024px) 56vw, calc(100vw - 96px)" width="1600" height="1035" loading="lazy" decoding="async" alt="The Delivery dashboard with sample data from a fictional agency: 77% on-time delivery against a 90% target, 36 of 154 tasks late, and the working days tasks spend at each stage."></picture><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-  </div></div></div>
-</li>
-    </ol>
-    <div class="after-acc reveal">
-      <div>
-        <h3 class="t-h3">Want to look around first?</h3>
-        <p class="muted">Walk through the real system yourself in the interactive tour.</p>
-        <p class="t-small note">Answers come from a fictional sample agency. Yours would come from your own data.</p>
-      </div>
-      <div class="btn-row"><a class="btn btn-secondary" href="demo/">Explore the product<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a></div>
-    </div>
-  </div>
-</section>
-
-<section class="section on-dark" id="idea" aria-labelledby="i-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">The idea</p><h2 class="t-h2" id="i-h">One system. One database.</h2><p class="t-lead">Projects, time, clients, pipeline, invoices and costs live in one place, replacing the stack of tools and spreadsheets you juggle today. Every hour is tied to a client, a fee and a margin, so the answers are there when you look.</p></div>
-    <div class="dia reveal">
-      <ul class="dia-tiles">
-        <li class="dia-tile"><svg class="icon" aria-hidden="true"><use href="#i-work"/></svg><h3 class="t-h3">Work &amp; time</h3><p>Projects, tasks, timers and approvals.</p></li>
-        <li class="dia-tile"><svg class="icon" aria-hidden="true"><use href="#i-pipeline"/></svg><h3 class="t-h3">Clients &amp; pipeline</h3><p>Leads, deals, clients and renewals.</p></li>
-        <li class="dia-tile"><svg class="icon" aria-hidden="true"><use href="#i-finance"/></svg><h3 class="t-h3">Finance</h3><p>Invoices, collections, costs and margins.</p></li>
-        <li class="dia-tile"><svg class="icon" aria-hidden="true"><use href="#i-insights"/></svg><h3 class="t-h3">Insights</h3><p>8 dashboards, plus a page that defines every measure.</p></li>
-      </ul>
-      <div class="dia-stems" aria-hidden="true"><span class="dia-stem"></span><span class="dia-stem"></span><span class="dia-stem"></span><span class="dia-stem"></span></div>
-      <div class="dia-base"><b>One database</b><p>Underneath all four. Every screen reads the same records, from the first timer to the last invoice.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="brand" aria-labelledby="b-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">White label</p><h2 class="t-h2" id="b-h">Your system. Your <span class="accent-word">brand.</span></h2><p class="t-lead">Your team logs in to your system, with your name, logo and colours, on your own web address. Our logo appears nowhere. Switch brands to see the same system, with the same data, dressed three ways.</p></div>
-    <div class="grid reveal">
-      <div class="wl-copy col-5">
-        <div>
-          <p class="t-small seg-label" id="seg-l">Show the system as</p>
-          <div class="seg" role="radiogroup" aria-labelledby="seg-l">
-            <button class="seg-opt" type="button" role="radio" aria-checked="true" tabindex="0" data-brand="saffronlane">Saffron Lane</button>
-            <button class="seg-opt" type="button" role="radio" aria-checked="false" tabindex="-1" data-brand="tessera">Tessera Studio</button>
-            <button class="seg-opt" type="button" role="radio" aria-checked="false" tabindex="-1" data-brand="cosolutions">Co.Solutions default</button>
+    <div class="answer-card">
+        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. Palm Grove Hotels is 52% of October fee earned, against a target of at most 60%; the top three clients are 97%. Effective rate 199 USD an hour against a target of 105; Azure Dental Clinics, the lowest, 143 USD an hour at a margin of 40%.">
+          <div class="card-head">
+            <div class="plate"><span class="eye">Money · Oct 2026, by client</span><span class="title">Client scorecard</span></div>
+            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="52" data-dec="0" data-pre="" data-suf="%" style="--i:0">52%</span></span><span class="cap"><b>Biggest client’s share</b><span>Palm Grove Hotels · target 60%</span></span></div>
           </div>
-          <p class="t-small wl-who" data-brand="saffronlane">Social &amp; content agency, Cairo</p>
-          <p class="t-small wl-who" data-brand="tessera" hidden>Digital &amp; creative studio, Riyadh</p>
-          <p class="t-small wl-who" data-brand="cosolutions" hidden>Our default look</p>
-        </div>
-        <ul class="wl-points">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Your name, logo, colours and typeface on every screen, from the sign-in page on.</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Your own web address.</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Set up around your departments, services and roles.</li>
-        </ul>
-        <p class="t-small">Saffron Lane and Tessera Studio are fictional agencies, made up to show the white label.</p>
-      </div>
-      <div class="wl-stage col-7">
-        <div class="wl-set is-on" data-brand="saffronlane">
-          <figure class="frame wl-pulse"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-pulse-saffronlane-1400.webp" srcset="assets/screens/web/wl-pulse-saffronlane-720.webp 720w, assets/screens/web/wl-pulse-saffronlane-1400.webp 1400w" sizes="(min-width: 1280px) 630px, (min-width: 1024px) 50vw, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The Pulse dashboard in Saffron Lane's colours and typeface, with the same sample data."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-          <figure class="frame wl-login"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-login-saffronlane-1400.webp" srcset="assets/screens/web/wl-login-saffronlane-720.webp 720w, assets/screens/web/wl-login-saffronlane-1400.webp 1400w" sizes="(min-width: 1024px) 340px, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The sign-in page dressed as Saffron Lane, a fictional social and content agency in Cairo."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-        </div>
-        <div class="wl-set" data-brand="tessera">
-          <figure class="frame wl-pulse"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-pulse-tessera-1400.webp" srcset="assets/screens/web/wl-pulse-tessera-720.webp 720w, assets/screens/web/wl-pulse-tessera-1400.webp 1400w" sizes="(min-width: 1280px) 630px, (min-width: 1024px) 50vw, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The Pulse dashboard in Tessera Studio's colours and typeface, with the same sample data."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-          <figure class="frame wl-login"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-login-tessera-1400.webp" srcset="assets/screens/web/wl-login-tessera-720.webp 720w, assets/screens/web/wl-login-tessera-1400.webp 1400w" sizes="(min-width: 1024px) 340px, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The sign-in page dressed as Tessera Studio, a fictional digital and creative studio in Riyadh."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-        </div>
-        <div class="wl-set" data-brand="cosolutions">
-          <figure class="frame wl-pulse"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-pulse-cosolutions-1400.webp" srcset="assets/screens/web/wl-pulse-cosolutions-720.webp 720w, assets/screens/web/wl-pulse-cosolutions-1400.webp 1400w" sizes="(min-width: 1280px) 630px, (min-width: 1024px) 50vw, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The Pulse dashboard in the Co.Solutions default look, with the same sample data."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-          <figure class="frame wl-login"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/screens/web/wl-login-cosolutions-1400.webp" srcset="assets/screens/web/wl-login-cosolutions-720.webp 720w, assets/screens/web/wl-login-cosolutions-1400.webp 1400w" sizes="(min-width: 1024px) 340px, calc(100vw - 40px)" width="1400" height="875" loading="lazy" decoding="async" alt="The sign-in page in the Co.Solutions default look."><figcaption class="frame-cap">Sample data · fictional agency</figcaption></figure>
-        </div>
-      </div>
+          <div class="ex-body ex-clients" aria-hidden="true">
+            <div>
+              <span class="ex-k">Share of October’s fee earned</span>
+              <div class="share"><i class="top3 bar" style="width:97%"></i><i class="base bar" style="width:52%;--i:2"></i><i class="limit" style="inset-inline-start:60%"></i><span class="limit-l" style="inset-inline-start:60%">Target at most 60%</span></div>
+              <div class="share-labels"><span><b>Palm Grove Hotels</b><span class="num" data-count="52" data-dec="0" data-pre="" data-suf="%" style="--i:0">52%</span></span><span><b>Top three</b><span class="num" data-count="97" data-dec="0" data-pre="" data-suf="%" style="--i:1">97%</span></span></div>
+            </div>
+            <div>
+              <span class="ex-k">Effective rate, USD an hour</span>
+              <div class="rates">
+                <span class="lbl">Agency average</span>
+                <div class="hbar"><i class="bar" style="width:71.196%;--i:1"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v" style="inset-inline-start:71.196%"><span class="num" data-count="199" data-dec="0" data-pre="" data-suf="" style="--i:1">199</span></span></div>
+                <span class="lbl"><b>Azure Dental Clinics</b></span>
+                <div class="hbar"><i class="bar" style="width:51.021%;--i:2"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v" style="inset-inline-start:51.021%"><span class="num" data-count="143" data-dec="0" data-pre="" data-suf="" style="--i:2">143</span> · margin <span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:2">40%</span></span></div>
+                <span></span><span class="tl" style="padding-inline-start:calc(37.5% - 40px)">Target 105</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Insights › Clients</span></div>
+        </figure>
+    </div>
+    <div class="answer-rest">
+      <p class="answer-body">Fee, hours, effective rate and margin for every client, how much of your income rests on one client, and the revenue at risk in the next 60 days.</p>
+      <div class="decision" style="--sol:var(--teal)"><i class="square"></i><span class="k">The decision it enables</span><span class="v">Who needs a call from you this week.</span></div>
+      <a class="tour-link" href="demo/admin/insights/clients">Explore this screen in the tour <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="answer flip" id="a2">
+    <div class="answer-head">
+      <h3><span class="num">02</span><span>How much did revisions and rework cost you last month?</span></h3>
+      <p class="answer-title">See where profit leaks.</p>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>16K USD</b>, 23% of revenue, went to work nobody paid for. Extra revision rounds cost nothing; <b>14K USD</b> of it was paid time that sat idle.</p></div>
+    </div>
+    <div class="answer-card">
+        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. October 2026: revenue collected 70K USD, net profit 13K USD. Leaks 16K USD, 23% of revenue: idle paid capacity 14K, internal time over allowance 2.2K; over-used projects and extra revisions nothing.">
+          <div class="card-head">
+            <div class="plate"><span class="eye">Money · Oct 2026, cash basis</span><span class="title">Revenue to net profit</span></div>
+            <div class="chip fig-leak" style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="16" data-dec="0" data-pre="" data-suf="K" style="--i:0">16K</span></span><span class="cap"><b>USD leaked, 23% of revenue</b><span>target at most 25%</span></span></div>
+          </div>
+          <div class="ex-body" aria-hidden="true">
+            <div class="wf">
+              <div class="wf-row strong"><span class="lbl">Revenue collected</span><div class="wf-track"><i class="bar c-sol" style="inset-inline-start:0%;width:97.222%;--i:0;"></i><span class="v t-sol" style="inset-inline-start:97.222%"><span class="num" data-count="70" data-dec="0" data-pre="" data-suf="K" style="--i:0">70K</span></span></div></div>
+              <div class="wf-row"><span class="lbl">Project costs and supplier bills</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:88.194%;width:9.028%;--i:1;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:97.222%"><span class="num" data-count="6.5" data-dec="1" data-pre="−" data-suf="K" style="--i:1">−6.5K</span></span></div></div>
+              <div class="wf-row"><span class="lbl">Payroll on paid work</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:51.057%;width:37.137%;--i:2;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:88.194%"><span class="num" data-count="27" data-dec="0" data-pre="−" data-suf="K" style="--i:2">−27K</span></span></div></div>
+              <div class="wf-row leak"><span class="lbl">Over-used projects</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:51.057%;width:0%;--i:3;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:3">0</span></span></div></div>
+              <div class="wf-row leak"><span class="lbl">Extra revisions</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:51.057%;width:0%;--i:4;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:4">0</span></span></div></div>
+              <div class="wf-row leak"><span class="lbl">Internal time over allowance</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:48.007%;width:3.05%;--i:5;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="2.2" data-dec="1" data-pre="−" data-suf="K" style="--i:5">−2.2K</span></span></div></div>
+              <div class="wf-row leak strong"><span class="lbl">Idle paid capacity</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:29.132%;width:18.875%;--i:6;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:48.007%"><span class="num" data-count="14" data-dec="0" data-pre="−" data-suf="K" style="--i:6">−14K</span></span></div></div>
+              <div class="wf-row"><span class="lbl">Running costs</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:18.715%;width:10.417%;--i:7;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:29.132%"><span class="num" data-count="7.5" data-dec="1" data-pre="−" data-suf="K" style="--i:7">−7.5K</span></span></div></div>
+              <div class="wf-row strong"><span class="lbl">Net profit</span><div class="wf-track"><i class="bar c-sol" style="inset-inline-start:0%;width:18.715%;--i:8;"></i><span class="v t-sol" style="inset-inline-start:18.715%"><span class="num" data-count="13" data-dec="0" data-pre="" data-suf="K" style="--i:8">13K</span></span></div></div>
+            </div>
+            <div class="legend"><span><i class="c-cost"></i>Costs</span><span><i class="c-leak"></i>Leaks: work nobody paid for</span></div>
+          </div>
+          <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Insights › Profit leaks</span></div>
+        </figure>
+    </div>
+    <div class="answer-rest">
+      <p class="answer-body">Every hour is tracked against every fee. You see which projects run over, which clients cost you extra revision rounds, and how much paid time sits idle.</p>
+      <div class="decision" style="--sol:var(--leak)"><i class="square"></i><span class="k">The decision it enables</span><span class="v">Which retainer to reprice, and which scope to cap.</span></div>
+      <a class="tour-link" href="demo/admin/insights/profit">Explore this screen in the tour <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="answer" id="a3">
+    <div class="answer-head">
+      <h3><span class="num">03</span><span>Can you take on a new client next month without burning out the team?</span></h3>
+      <p class="answer-title">Know your capacity before you say yes.</p>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>Yes.</b> Nobody is above 90% of their capacity, and the next 12 weeks are booked to 16%, 39% with likely deals.</p></div>
+    </div>
+    <div class="answer-card">
+        <figure class="excerpt fam-people" data-anim-card role="figure" aria-label="Sample data. Nobody is above 90% of their capacity, and utilisation was 78% in October. Booked hours as a share of each person's capacity, weeks 46 to 53: Hany Samir 56% then 26%; Karim Adel 0%, 30% and 4%; Mona Farid 19% and 4%; Sara Nabil 6% and 30%; Youssef Amin 38% and 19%; nothing booked after that yet.">
+          <div class="card-head">
+            <div class="plate"><span class="eye">People · weeks 46–53, from today</span><span class="title">Who is loaded, week by week</span></div>
+            <div class="chip " style="--fig-w:2ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:0">0</span></span><span class="cap"><b>People above 90%</b><span>of 5 · utilisation 78%</span></span></div>
+          </div>
+          <div class="ex-body" aria-hidden="true">
+            <div class="hm-top"><span class="ex-k">Booked hours as a share of each person’s capacity</span><span class="note">5 people</span></div>
+            <div class="hm">
+                <span></span><span class="wk">W46*</span><span class="wk">W47</span><span class="wk">W48</span><span class="wk">W49</span><span class="wk">W50</span><span class="wk">W51</span><span class="wk">W52</span><span class="wk">W53</span>
+                <span class="who"><b>Hany Samir</b><span>Creative</span></span><span class="cell" style="--i:0"><span class="num" data-count="56" data-dec="0" data-pre="" data-suf="" style="--i:0">56</span><span class="pc">%</span></span><span class="cell" style="--i:1"><span class="num" data-count="26" data-dec="0" data-pre="" data-suf="" style="--i:1">26</span><span class="pc">%</span></span><span class="cell none" style="--i:2"></span><span class="cell none" style="--i:3"></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span>
+                <span class="who"><b>Karim Adel</b><span>Marketing</span></span><span class="cell" style="--i:1"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:1">0</span><span class="pc">%</span></span><span class="cell" style="--i:2"><span class="num" data-count="30" data-dec="0" data-pre="" data-suf="" style="--i:2">30</span><span class="pc">%</span></span><span class="cell" style="--i:3"><span class="num" data-count="4" data-dec="0" data-pre="" data-suf="" style="--i:3">4</span><span class="pc">%</span></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span>
+                <span class="who"><b>Mona Farid</b><span>Creative</span></span><span class="cell" style="--i:2"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:2">19</span><span class="pc">%</span></span><span class="cell" style="--i:3"><span class="num" data-count="4" data-dec="0" data-pre="" data-suf="" style="--i:3">4</span><span class="pc">%</span></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span>
+                <span class="who"><b>Sara Nabil</b><span>Marketing</span></span><span class="cell" style="--i:3"><span class="num" data-count="6" data-dec="0" data-pre="" data-suf="" style="--i:3">6</span><span class="pc">%</span></span><span class="cell" style="--i:4"><span class="num" data-count="30" data-dec="0" data-pre="" data-suf="" style="--i:4">30</span><span class="pc">%</span></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span>
+                <span class="who"><b>Youssef Amin</b><span>Marketing</span></span><span class="cell" style="--i:4"><span class="num" data-count="38" data-dec="0" data-pre="" data-suf="" style="--i:4">38</span><span class="pc">%</span></span><span class="cell" style="--i:5"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:5">19</span><span class="pc">%</span></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span><span class="cell none" style="--i:11"></span>
+            </div>
+            <div class="band-legend"><span style="background:#F1F5F5;color:#3E4E52">Under 65%</span><span style="background:oklch(0.95 0.02 320)">65–80%</span><span style="background:oklch(0.87 0.05 320)">To 90%</span><span style="background:oklch(0.74 0.09 320)">To 100%</span><span style="background:#B4532A;color:#FFFFFF">Over 100%</span></div>
+            <p class="hm-note">* This week counts from today. A blank week has nothing booked yet.</p>
+          </div>
+          <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Insights › Capacity</span></div>
+        </figure>
+    </div>
+    <div class="answer-rest">
+      <p class="answer-body">Free hours for the next 12 weeks, per team and per person, including the work your pipeline is about to bring in.</p>
+      <div class="decision" style="--sol:var(--people-solid)"><i class="square"></i><span class="k">The decision it enables</span><span class="v">When to take the new client, and when to hire.</span></div>
+      <a class="tour-link" href="demo/admin/insights/capacity">Explore this screen in the tour <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="answer flip" id="a4">
+    <div class="answer-head">
+      <h3><span class="num">04</span><span>How much revenue is coming in over the next six months?</span></h3>
+      <p class="answer-title">See revenue before it lands.</p>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>34K USD</b> from 2 deals, weighted by their chance of winning. All 6 of the next 6 months fall short of the 55K USD monthly target.</p></div>
+    </div>
+    <div class="answer-card">
+        <figure class="excerpt fam-pipe" data-anim-card role="figure" aria-label="Sample data. Weighted forecast 34K USD from 2 deals: 19K in November, 15K in December, nothing yet from January to April. All six months fall short of the 55K USD monthly target.">
+          <div class="card-head">
+            <div class="plate"><span class="eye">Pipeline · next 6 months, weighted</span><span class="title">Revenue forecast</span></div>
+            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="34" data-dec="0" data-pre="" data-suf="K" style="--i:0">34K</span></span><span class="cap"><b>USD weighted, from 2 deals</b><span>90K open · win rate 83%</span></span></div>
+          </div>
+          <div class="ex-body" aria-hidden="true">
+            <div class="fc"><i class="fc-target"></i><span class="fc-target-l">Target 55K a month</span><div class="fc-cols"><div class="fc-col"><i class="fc-short fade" style="--i:2"></i><i class="bar c-contract" style="height:30.20%;--i:0"></i><span class="v" style="bottom:30.20%"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="K" style="--i:0">19K</span></span></div><div class="fc-col"><i class="fc-short fade" style="--i:3"></i><i class="bar c-proposal" style="height:23.59%;--i:1"></i><span class="v" style="bottom:23.59%"><span class="num" data-count="15" data-dec="0" data-pre="" data-suf="K" style="--i:1">15K</span></span></div><div class="fc-col"><i class="fc-short fade" style="--i:4"></i><span class="fc-short-l fade" style="--i:4">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:5"></i><span class="fc-short-l fade" style="--i:5">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:6"></i><span class="fc-short-l fade" style="--i:6">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:7"></i><span class="fc-short-l fade" style="--i:7">short</span></div></div></div>
+            <div class="fc-months"><span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span></div>
+            <div class="legend"><span><i class="c-contract"></i>Contracting (80%)</span><span><i class="c-proposal"></i>Proposal sent (50%)</span></div>
+            <p class="ex-cap">Each deal sits in the month it should start, weighted by its chance of winning.</p>
+          </div>
+          <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Clients › Forecast</span></div>
+        </figure>
+    </div>
+    <div class="answer-rest">
+      <p class="answer-body">Every open deal, weighted by its chance of winning, placed in the month it should start and set against your revenue target.</p>
+      <div class="decision" style="--sol:var(--pipe-solid)"><i class="square"></i><span class="k">The decision it enables</span><span class="v">When to push for new business, and how hard.</span></div>
+      <a class="tour-link" href="demo/admin/crm/forecast">Explore this screen in the tour <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <article class="answer" id="a5">
+    <div class="answer-head">
+      <h3><span class="num">05</span><span>Where is late work stuck, and who is it waiting on?</span></h3>
+      <p class="answer-title">See where work waits.</p>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>In progress.</b> 1 of 16 tasks was late, and work spent 7.9 working days in progress against 1.9 in review. None went through client review.</p></div>
+    </div>
+    <div class="answer-card">
+        <figure class="excerpt fam-time" data-anim-card role="figure" aria-label="Sample data. On-time delivery 94% against a target of 85%; 1 of 16 tasks late. Working days a task sits at each stage: in progress 7.9, in review 1.9; no task went through client review.">
+          <div class="card-head">
+            <div class="plate"><span class="eye">Delivery · Oct 2026, approved tasks</span><span class="title">Where work waits</span></div>
+            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="94" data-dec="0" data-pre="" data-suf="%" style="--i:0">94%</span></span><span class="cap"><b>On-time delivery</b><span>1 of 16 late · target 85%</span></span></div>
+          </div>
+          <div class="ex-body" aria-hidden="true">
+            <span class="ex-k">Working days a task sits at each stage</span>
+            <div class="dl">
+              <span class="lbl">In progress</span><div class="dl-track"><i class="bar" style="width:79.1%"></i><span class="v" style="inset-inline-start:79.1%"><span class="num" data-count="7.9" data-dec="1" data-pre="" data-suf="" style="--i:0">7.9</span></span></div>
+              <span class="lbl">In review</span><div class="dl-track"><i class="bar" style="width:19.2%;--i:1"></i><span class="v" style="inset-inline-start:19.2%"><span class="num" data-count="1.9" data-dec="1" data-pre="" data-suf="" style="--i:1">1.9</span></span></div>
+              <span class="lbl">Client review</span><div class="dl-track"><span class="dl-none">— no task went through it</span></div>
+            </div>
+            <div class="dl-axis"><span></span><div><span style="inset-inline-start:0">0</span><span style="inset-inline-start:20%">2</span><span style="inset-inline-start:40%">4</span><span style="inset-inline-start:60%">6</span><span style="inset-inline-start:80%">8</span><span style="inset-inline-end:0">10 days</span></div></div>
+          </div>
+          <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Insights › Delivery</span></div>
+        </figure>
+    </div>
+    <div class="answer-rest">
+      <p class="answer-body">Your on-time rate, your revision rounds, and how many days work sits at each stage, including days spent waiting on the client.</p>
+      <div class="decision" style="--sol:var(--time-solid)"><i class="square"></i><span class="k">The decision it enables</span><span class="v">Which step to fix, and which client conversation to have.</span></div>
+      <a class="tour-link" href="demo/admin/insights/delivery">Explore this screen in the tour <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </article>
+  <div class="look">
+    <i class="square"></i>
+    <div class="look-copy">
+      <h3>Want to look around first?</h3>
+      <p>Walk through the real system yourself in the interactive tour.</p>
+      <span class="note">Answers come from a fictional sample agency. Yours would come from your own data.</span>
+    </div>
+    <div class="look-ctas">
+      <a class="btn btn-ink" href="demo/">Explore the product</a>
+      <a class="btn btn-line" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener">Request a demo on WhatsApp</a>
     </div>
   </div>
 </section>
 
-<section class="section section--surface" id="why" aria-labelledby="y-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">Why us</p><h2 class="t-h2" id="y-h">Built for how agencies actually run.</h2><p class="t-lead">A system made for agencies, set up for you, with the operations know-how to run it.</p></div>
-    <ul class="cards">
-      <li class="card reveal"><svg class="icon" aria-hidden="true"><use href="#i-agency"/></svg><h3 class="t-h3">Built inside a real agency</h3><p>Every screen started as a real problem in a working agency: unpaid revisions, a team booked past capacity, a client who quietly stopped calling. It isn't a generic tool adapted to agencies.</p></li>
-      <li class="card reveal" style="--stagger:60ms"><svg class="icon" aria-hidden="true"><use href="#i-brand"/></svg><h3 class="t-h3">Your brand, your domain</h3><p>The system carries your identity, not ours, on your own web address.</p></li>
-      <li class="card reveal"><svg class="icon" aria-hidden="true"><use href="#i-ops"/></svg><h3 class="t-h3">Operations expertise included</h3><p>You get a consultation plus ready operations documents: processes, roles and KPIs. We don't hand over a login and leave: we stay through set-up and go-live.</p></li>
-      <li class="card reveal" style="--stagger:60ms"><svg class="icon" aria-hidden="true"><use href="#i-setup"/></svg><h3 class="t-h3">Set up for you, with your data</h3><p>Your team's first login is into a system that already knows your clients, projects and people.</p></li>
+<section class="dark idea" aria-labelledby="i-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="head-l"><p class="eyebrow">The idea</p><h2 class="display" id="i-h">One system. One <em class="em">database.</em></h2></div>
+      <p class="lead">Projects, time, clients, pipeline, invoices and costs live in one place, replacing the stack of tools and spreadsheets you juggle today. Every hour is tied to a client, a fee and a margin, so the answers are there when you look.</p>
+    </div>
+    <ul class="pillars">
+      <li class="pillar"><div class="plate" style="--fam-block:var(--time-block);--sol:var(--time-solid)"><i class="sol"></i><h3>Work &amp; time</h3></div><p>Projects, tasks, timers and approvals.</p></li>
+      <li class="pillar"><div class="plate" style="--fam-block:var(--pipe-block);--sol:var(--pipe-solid)"><i class="sol"></i><h3>Clients &amp; pipeline</h3></div><p>Leads, deals, clients and renewals.</p></li>
+      <li class="pillar"><div class="plate" style="--fam-block:var(--money-block);--sol:var(--money-solid)"><i class="sol"></i><h3>Finance</h3></div><p>Invoices, collections, costs and margins.</p></li>
+      <li class="pillar"><div class="plate" style="--fam-block:#E6EEEE;--sol:var(--ink)"><i class="sol"></i><h3>Insights</h3></div><p>8 dashboards, plus a page that defines every measure.</p></li>
     </ul>
-    <div class="strip reveal"><svg class="icon" aria-hidden="true"><use href="#i-unlock"/></svg><p><strong>Not locked in:</strong> your data is yours, exportable any time, and if you leave, we hand over your install and its data.</p></div>
+    <div class="db"><strong>One database</strong><p>Underneath all four. Every screen reads the same records, from the first timer to the last invoice.</p></div>
+  </div>
+</section>
 
-    <h3 class="t-h3 cmp-title reveal" id="cmp-h">What changes when you switch</h3>
-    <div class="cmp reveal" role="table" aria-labelledby="cmp-h">
-      <div class="cmp-head" role="rowgroup"><div class="cmp-row" role="row"><span role="columnheader"><span class="sr">Topic</span></span><span role="columnheader">Generic tools + spreadsheets</span><span role="columnheader" class="us">Co.Solutions</span></div></div>
-      <div role="rowgroup">
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Tools</span><span class="them" role="cell" data-label="Generic tools">4–5 separate subscriptions</span><span class="us" role="cell" data-label="Co.Solutions">One system</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Profitability</span><span class="them" role="cell" data-label="Generic tools">Manual reports, if any</span><span class="us" role="cell" data-label="Co.Solutions">Live, on every client and project</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Capacity ahead</span><span class="them" role="cell" data-label="Generic tools">A guess</span><span class="us" role="cell" data-label="Co.Solutions">Next 12 weeks, including the pipeline</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Setup</span><span class="them" role="cell" data-label="Generic tools">You configure it yourself</span><span class="us" role="cell" data-label="Co.Solutions">Set up for you, with your data</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Pricing</span><span class="them" role="cell" data-label="Generic tools">Per user, every month</span><span class="us" role="cell" data-label="Co.Solutions">One fee plus an annual care fee</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Brand</span><span class="them" role="cell" data-label="Generic tools">Theirs</span><span class="us" role="cell" data-label="Co.Solutions">Yours</span></div>
-        <div class="cmp-row" role="row"><span class="topic" role="rowheader">Operations guidance</span><span class="them" role="cell" data-label="Generic tools">None</span><span class="us" role="cell" data-label="Co.Solutions">Processes, roles and KPIs included</span></div>
+<section class="brand" id="brand" aria-labelledby="b-h">
+  <div class="wrap brand-grid">
+    <div class="brand-copy">
+      <p class="eyebrow">White label</p>
+      <h2 class="display" id="b-h">Your system. Your <em class="em">brand.</em></h2>
+      <p class="lead">Your team logs in to your system, with your name, logo and colours, on your own web address. Our logo appears nowhere. Switch brands to see the same system, with the same data, dressed three ways.</p>
+    </div>
+    <div class="wl b-saffron" data-wl>
+        <div class="wl-pick">
+          <span class="wl-label" id="wl-label">Show the system as</span>
+          <div class="wl-opts" role="radiogroup" aria-labelledby="wl-label">
+            <button type="button" class="wl-opt b-saffron" role="radio" aria-checked="true" tabindex="0" data-brand="saffron" data-desc="Social & content agency, Cairo" data-domain="erp.saffronlane.com"><i></i>Saffron Lane</button>
+            <button type="button" class="wl-opt b-tessera" role="radio" aria-checked="false" tabindex="-1" data-brand="tessera" data-desc="Digital and creative studio, Riyadh" data-domain="erp.tesserastudio.com"><i></i>Tessera Studio</button>
+            <button type="button" class="wl-opt b-cos" role="radio" aria-checked="false" tabindex="-1" data-brand="cos" data-desc="The Co.Solutions default look" data-domain="erp.youragency.com"><i></i>Co.Solutions default</button>
+          </div>
+          <span class="wl-desc" aria-live="polite" data-wl-desc>Social & content agency, Cairo</span>
+        </div>
+        <div class="wl-frame" data-anim-card role="figure" aria-label="The same Pulse screen and sample data in the chosen agency's colours, typeface and logo: margin on fee earned by client, October 2026, Palm Grove Hotels 55%, Azure Dental Clinics 40%, Nile Coffee Roasters 59%.">
+          <div class="wl-strip">
+            <div class="wl-logos"><img class="is-on" data-logo="saffron" src="assets/fictional-brands/saffronlane-logo.svg" alt="Saffron Lane" width="200" height="40" loading="lazy"><img class="" data-logo="tessera" src="assets/fictional-brands/tessera-logo.svg" alt="" width="200" height="40" loading="lazy"><img class="cos " data-logo="cos" src="assets/brand/cosolutions-logo-color.svg" alt="" width="200" height="40" loading="lazy"></div>
+            <span class="wl-domain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-wl-domain>erp.saffronlane.com</span></span>
+          </div>
+          <div class="wl-in" aria-hidden="true">
+            <div class="wl-page"><div><b>Pulse</b><span>How is the agency doing? · Oct 2026 vs Sep</span></div><span class="wl-open">Open Clients</span></div>
+            <div class="wl-card">
+              <div class="card-head">
+                <div class="plate"><span class="eye">Money · Oct 2026 vs Sep</span><span class="title">Margin by client</span></div>
+                <div class="chip" style="--fig-w:4.1ch"><i class="sq"></i><span class="fig"><span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:2">40%</span></span><span class="cap"><b>Azure Dental Clinics</b><span>Margin on fee earned</span></span></div>
+              </div>
+              <div class="hc-body">
+                <div class="hc-row"><span class="name">Palm Grove Hotels</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:50.000%;--i:0"></i><span class="hc-val" style="inset-inline-start:calc(81.818% + 8px)"><span class="num" data-count="55" data-dec="0" data-pre="" data-suf="%" style="--i:0">55%</span></span></div></div>
+                <div class="hc-row is-on"><span class="name">Azure Dental Clinics</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:36.364%;--i:1"></i><span class="hc-val" style="inset-inline-start:calc(68.182% + 8px)"><span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:1">40%</span></span></div></div>
+                <div class="hc-row"><span class="name">Nile Coffee Roasters</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:53.636%;--i:2"></i><span class="hc-val" style="inset-inline-start:calc(85.455% + 8px)"><span class="num" data-count="59" data-dec="0" data-pre="" data-suf="%" style="--i:2">59%</span></span></div></div>
+              </div>
+              <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="go">Open Clients <span class="arr" aria-hidden="true">→</span></span></div>
+            </div>
+          </div>
+        </div>
       </div>
+    <div class="brand-points">
+      <ul class="bullets"><li>Your name, logo, colours and typeface on every screen, from the sign-in page on.</li><li>Your own web address.</li><li>Set up around your departments, services and roles.</li></ul>
+      <span class="note">Saffron Lane and Tessera Studio are fictional agencies, made up to show the white label.</span>
     </div>
   </div>
 </section>
 
-<section class="section" id="security" aria-labelledby="s-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">Security</p><h2 class="t-h2" id="s-h">Your data stays yours.</h2><p class="t-lead">Your own install, daily backups, and you decide who sees what.</p></div>
-    <ul class="features">
-      <li class="feature reveal"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg><h3 class="t-h3">Your own install</h3><p>Your system runs on its own isolated install and database, never shared with another client.</p></li>
-      <li class="feature reveal" style="--stagger:60ms"><svg class="icon" aria-hidden="true"><use href="#i-backup"/></svg><h3 class="t-h3">Daily encrypted backups</h3><p>Every day, encrypted and stored off-site.</p></li>
-      <li class="feature reveal" style="--stagger:120ms"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg><h3 class="t-h3">Export any time</h3><p>Take your data to Excel or PDF whenever you want, including if you leave.</p></li>
-      <li class="feature reveal" style="--stagger:180ms"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><h3 class="t-h3">You control access</h3><p>Decide who sees what, role by role and person by person. Salaries and money stay private unless you open them.</p></li>
-    </ul>
-  </div>
-</section>
-
-<section class="section section--surface" id="how" aria-labelledby="h-h">
-  <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">How it works</p><h2 class="t-h2" id="h-h">Live in about four weeks.</h2><p class="t-lead">A fixed path from the first session to a system your team already knows how to use.</p></div>
-    <ol class="tl reveal">
-      <li class="tl-step"><span class="chip">Week 1</span><h3 class="t-h3">Consultation</h3><p>Two focused sessions to map your services, departments, roles and how work moves today.</p></li>
-      <li class="tl-step"><span class="chip">Weeks 2–3</span><h3 class="t-h3">Setup with your data</h3><p>We load your people, clients, projects and pricing, and configure the system to your process and brand.</p></li>
-      <li class="tl-step"><span class="chip">Week 4</span><h3 class="t-h3">Go-live</h3><p>Your team logs in. Each role is trained on what it needs.</p></li>
-      <li class="tl-step"><span class="chip">Month 2</span><h3 class="t-h3">Follow-up month</h3><p>We stay close for adjustments, fixes and questions.</p></li>
-      <li class="tl-step"><span class="chip">Ongoing</span><h3 class="t-h3">Care plan</h3><p>Hosting, daily backups, security and updates, renewed yearly.</p></li>
+<section class="dark why" id="why" aria-labelledby="y-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="head-l"><p class="eyebrow">Why us</p><h2 class="display" id="y-h">Built for how agencies actually <em class="em">run.</em></h2></div>
+      <p class="lead">A system made for agencies, set up for you, with the operations know-how to run it.</p>
+    </div>
+    <ol class="diffs">
+      <li><span class="n">01</span><div><h3>Built inside a real agency</h3><p>Every screen started as a real problem in a working agency: unpaid revisions, a team booked past capacity, a client who quietly stopped calling. It isn’t a generic tool adapted to agencies.</p></div></li>
+      <li><span class="n">02</span><div><h3>Your brand, your domain</h3><p>The system carries your identity, not ours, on your own web address.</p></div></li>
+      <li><span class="n">03</span><div><h3>Operations expertise included</h3><p>You get a consultation plus ready operations documents: processes, roles and KPIs. We don’t hand over a login and leave: we stay through set-up and go-live.</p></div></li>
+      <li><span class="n">04</span><div><h3>Set up for you, with your data</h3><p>Your team’s first login is into a system that already knows your clients, projects and people.</p></div></li>
     </ol>
-    <div class="pack grid reveal">
-      <div class="col-5"><h3 class="t-h3">Built to run without you.</h3><p>You also get the operations pack, so the agency keeps moving when you step away.</p></div>
-      <ul class="pack-items col-7">
-        <li><svg class="icon" aria-hidden="true"><use href="#i-doc"/></svg>Documented processes</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-roles"/></svg>Clear roles</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-insights"/></svg>KPIs for every role</li>
-      </ul>
-    </div>
-    <div class="terms reveal">
-      <ul>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>50% at signing, 50% at go-live.</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>If go-live slips on our side, your follow-up month is extended free.</li>
-        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Your data is exportable at any time.</li>
-      </ul>
-      <div class="btn-row"><a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a></div>
+    <p class="locked"><i class="square"></i><span><b>Not locked in:</b> your data is yours, exportable any time, and if you leave, we hand over your install and its data.</span></p>
+    <h3 class="cmp-h" id="cmp-h">What changes when you switch</h3>
+    <div class="cmp" role="table" aria-labelledby="cmp-h">
+      <div class="cmp-head" role="row"><span class="topic" role="columnheader">Topic</span><span class="gen" role="columnheader">Generic tools + spreadsheets</span><span role="columnheader"><span class="co-tab">Co.Solutions</span></span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Tools</span><span class="gen" role="cell">4–5 separate subscriptions</span><span class="co" role="cell">One system</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Profitability</span><span class="gen" role="cell">Manual reports, if any</span><span class="co" role="cell">Live, on every client and project</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Capacity ahead</span><span class="gen" role="cell">A guess</span><span class="co" role="cell">Next 12 weeks, including the pipeline</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Setup</span><span class="gen" role="cell">You configure it yourself</span><span class="co" role="cell">Set up for you, with your data</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Pricing</span><span class="gen" role="cell">Per user, every month</span><span class="co" role="cell">One fee plus an annual care fee</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Brand</span><span class="gen" role="cell">Theirs</span><span class="co" role="cell">Yours</span></div>
+      <div class="cmp-row" role="row"><span class="topic" role="rowheader">Operations guidance</span><span class="gen" role="cell">None</span><span class="co" role="cell">Processes, roles and KPIs included</span></div>
     </div>
   </div>
 </section>
 
-<section class="section" id="faq" aria-labelledby="f-h">
-  <div class="container grid faq-layout">
-    <div class="section-head reveal"><p class="eyebrow">FAQ</p><h2 class="t-h2" id="f-h">Straight answers.</h2><p class="t-lead">On switching, data, access, timing and cost.</p></div>
-    <ul class="acc acc--faq faq-list reveal">
-<li class="acc-item" id="faq1">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq1-btn" aria-expanded="false" aria-controls="faq1-panel"><span class="acc-q t-h3">We already use ClickUp, Monday or Excel. Why switch?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq1-panel" role="region" aria-labelledby="faq1-btn"><div class="acc-clip"><p class="acc-body">Those tools organise tasks. They don't tell you which client is profitable, how much capacity you have next month, or what revenue is coming. Your existing data comes with you at setup.</p></div></div>
-</li>
-<li class="acc-item" id="faq2">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq2-btn" aria-expanded="false" aria-controls="faq2-panel"><span class="acc-q t-h3">Will my team actually use it?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq2-panel" role="region" aria-labelledby="faq2-btn"><div class="acc-clip"><p class="acc-body">It's set up around your process, with your data, before anyone logs in. Each role is trained, and sees only what it needs.</p></div></div>
-</li>
-<li class="acc-item" id="faq3">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq3-btn" aria-expanded="false" aria-controls="faq3-panel"><span class="acc-q t-h3">Is it only for marketing agencies?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq3-panel" role="region" aria-labelledby="faq3-btn"><div class="acc-clip"><p class="acc-body">It's built for marketing agencies, digital studios and business consultancies: any team that sells its time on projects and retainers. The wording and setup adapt to how you work.</p></div></div>
-</li>
-<li class="acc-item" id="faq4">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq4-btn" aria-expanded="false" aria-controls="faq4-panel"><span class="acc-q t-h3">Where is my data, and who can see it?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq4-panel" role="region" aria-labelledby="faq4-btn"><div class="acc-clip"><p class="acc-body">On your own isolated install, with daily encrypted off-site backups. Inside the system, you decide who sees what.</p></div></div>
-</li>
-<li class="acc-item" id="faq5">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq5-btn" aria-expanded="false" aria-controls="faq5-panel"><span class="acc-q t-h3">Who can see salaries?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq5-panel" role="region" aria-labelledby="faq5-btn"><div class="acc-clip"><p class="acc-body">Only the people you allow. Access to money and salaries is set role by role and person by person.</p></div></div>
-</li>
-<li class="acc-item" id="faq6">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq6-btn" aria-expanded="false" aria-controls="faq6-panel"><span class="acc-q t-h3">Can I leave and take my data?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq6-panel" role="region" aria-labelledby="faq6-btn"><div class="acc-clip"><p class="acc-body">Yes. Your data is yours, exportable any time to Excel or PDF, and if you leave, we hand over your install and its data.</p></div></div>
-</li>
-<li class="acc-item" id="faq7">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq7-btn" aria-expanded="false" aria-controls="faq7-panel"><span class="acc-q t-h3">Is it in Arabic?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq7-panel" role="region" aria-labelledby="faq7-btn"><div class="acc-clip"><p class="acc-body">The interface is in English today. Your content, such as client names, notes and tasks, can be written in Arabic.</p></div></div>
-</li>
-<li class="acc-item" id="faq8">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq8-btn" aria-expanded="false" aria-controls="faq8-panel"><span class="acc-q t-h3">How long until we're live?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq8-panel" role="region" aria-labelledby="faq8-btn"><div class="acc-clip"><p class="acc-body">About four weeks from signing, depending on how quickly your data is ready.</p></div></div>
-</li>
-<li class="acc-item" id="faq9">
-  <h3 class="acc-title"><button class="acc-btn" type="button" id="faq9-btn" aria-expanded="false" aria-controls="faq9-panel"><span class="acc-q t-h3">What does it cost?</span><svg class="icon acc-chev" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
-  <div class="acc-panel" id="faq9-panel" role="region" aria-labelledby="faq9-btn"><div class="acc-clip"><p class="acc-body">It's quoted after a short call, because setup depends on your size and structure. You pay one project fee plus an annual care fee. There is no per-seat subscription.</p></div></div>
-</li>
+<section class="security" id="security" aria-labelledby="s-h">
+  <div class="wrap security-grid">
+    <div class="security-head">
+      <p class="eyebrow">Security</p>
+      <h2 class="display" id="s-h">Your data stays <em class="em">yours.</em></h2>
+      <p class="lead">Your own install, daily backups, and you decide who sees what.</p>
+    </div>
+    <ul class="sec-list">
+      <li><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Your own install</h3><p>Your system runs on its own isolated install and database, never shared with another client.</p></div></li>
+      <li><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Daily encrypted backups</h3><p>Every day, encrypted and stored off-site.</p></div></li>
+      <li><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Export any time</h3><p>Take your data to Excel or PDF whenever you want, including if you leave.</p></div></li>
+      <li><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>You control access</h3><p>Decide who sees what, role by role and person by person. Salaries and money stay private unless you open them.</p></div></li>
     </ul>
-    <div class="faq-ask reveal">
-      <p>Anything we didn't cover?</p>
-      <div class="btn-row"><a class="btn btn-secondary" data-wa="question" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I%20have%20a%20question%20about%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Ask on WhatsApp</a></div>
+  </div>
+</section>
+
+<section class="dark how" id="how" aria-labelledby="h-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="head-l"><p class="eyebrow">How it works</p><h2 class="display" id="h-h">Live in about four <em class="em">weeks.</em></h2></div>
+      <p class="lead">A fixed path from the first session to a system your team already knows how to use.</p>
+    </div>
+    <div class="tl" data-anim-card>
+      <div class="tl-head brk" aria-hidden="true"><span></span><span class="brkt"><i></i><span>About four weeks</span></span></div>
+      <div class="tl-head weeks" aria-hidden="true"><span></span><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span><span>Month 2</span><span>Ongoing</span></div>
+      <ol>
+        <li class="tl-step">
+          <div class="tl-rail" aria-hidden="true"><i class="rail"></i><i class="fill" style="--i:0"></i><i class="node"></i></div>
+          <div class="tl-text"><span class="p">Week 1</span><h3>Consultation</h3><p>Two focused sessions to map your services, departments, roles and how work moves today.</p></div>
+          <div class="tl-bar" aria-hidden="true" style="grid-column:2 / 3"><i class="bar" style="--i:0"></i><span class="bl fade" style="--i:4">Week 1</span><i class="nd fade" style="--i:0"></i></div>
+        </li>
+        <li class="tl-step">
+          <div class="tl-rail" aria-hidden="true"><i class="rail"></i><i class="fill" style="--i:1"></i><i class="node"></i></div>
+          <div class="tl-text"><span class="p">Weeks 2–3</span><h3>Setup with your data</h3><p>We load your people, clients, projects and pricing, and configure the system to your process and brand.</p></div>
+          <div class="tl-bar" aria-hidden="true" style="grid-column:3 / 5"><i class="bar" style="--i:4"></i><span class="bl fade" style="--i:8">Weeks 2–3</span><i class="nd fade" style="--i:4"></i></div>
+        </li>
+        <li class="tl-step">
+          <div class="tl-rail" aria-hidden="true"><i class="rail"></i><i class="fill" style="--i:2"></i><i class="node"></i></div>
+          <div class="tl-text"><span class="p">Week 4</span><h3>Go-live</h3><p>Your team logs in. Each role is trained on what it needs.</p></div>
+          <div class="tl-bar" aria-hidden="true" style="grid-column:5 / 6"><i class="bar" style="--i:12"></i><span class="bl fade" style="--i:16">Week 4</span><i class="nd fade" style="--i:12"></i></div>
+        </li>
+        <li class="tl-step">
+          <div class="tl-rail" aria-hidden="true"><i class="rail"></i><i class="fill" style="--i:3"></i><i class="node"></i></div>
+          <div class="tl-text"><span class="p">Month 2</span><h3>Follow-up month</h3><p>We stay close for adjustments, fixes and questions.</p></div>
+          <div class="tl-bar" aria-hidden="true" style="grid-column:6 / 7"><i class="bar" style="--i:16"></i><span class="bl fade" style="--i:20">Month 2</span><i class="nd fade" style="--i:16"></i></div>
+        </li>
+        <li class="tl-step">
+          <div class="tl-rail" aria-hidden="true"><i class="rail"></i><i class="fill" style="--i:4"></i><i class="node"></i></div>
+          <div class="tl-text"><span class="p">Ongoing</span><h3>Care plan</h3><p>Hosting, daily backups, security and updates, renewed yearly.</p></div>
+          <div class="tl-bar care" aria-hidden="true" style="grid-column:7 / 8"><i class="bar" style="--i:20"></i><span class="bl fade" style="--i:24">Yearly</span><i class="nd fade" style="--i:20"></i></div>
+        </li>
+      </ol>
+    </div>
+    <div class="pack-row">
+      <div class="pack">
+        <h3>Built to run without you.</h3>
+        <p>You also get the operations pack, so the agency keeps moving when you step away.</p>
+        <ul><li>Documented processes</li><li>Clear roles</li><li>KPIs for every role</li></ul>
+      </div>
+      <div class="terms">
+        <ul class="bullets"><li>50% at signing, 50% at go-live.</li><li>If go-live slips on our side, your follow-up month is extended free.</li><li>Your data is exportable at any time.</li></ul>
+        <a class="btn btn-primary" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section final on-dark" id="start" aria-labelledby="c-h">
-  <div class="container">
-    <div class="section-head reveal"><h2 class="t-h2" id="c-h">See your agency in <span class="accent-word">numbers.</span></h2><p class="t-lead">30 minutes. We'll show you the system on a sample agency, then talk through yours. Or look around on your own first.</p></div>
-    <div class="btn-row reveal"><a class="btn btn-primary" data-wa="demo" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg class="icon icon-wa" aria-hidden="true"><use href="#i-wa"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a><a class="btn btn-secondary" href="demo/">Explore the product<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-    <p class="expect-title reveal">What happens on the call</p>
-    <ol class="expect reveal">
-      <li><span class="num">01</span><span><b>A live walk-through</b> of the system on a sample agency.</span></li>
-      <li><span class="num">02</span><span><b>Your setup:</b> departments, services and the numbers you want to see.</span></li>
-      <li><span class="num">03</span><span><b>A clear quote</b> and timeline, sent after the call.</span></li>
-    </ol>
+<section class="faq" id="faq" aria-labelledby="f-h">
+  <div class="wrap faq-grid">
+    <div class="faq-head">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="display" id="f-h">Straight <em class="em">answers.</em></h2>
+      <p class="lead">On switching, data, access, timing and cost.</p>
+    </div>
+    <div class="faq-list">
+      <div class="qa is-open"><i class="square"></i><h3><button type="button" aria-expanded="true" aria-controls="faq1" id="faq1-b">We already use ClickUp, Monday or Excel. Why switch?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq1" role="region" aria-labelledby="faq1-b">Those tools organise tasks. They don’t tell you which client is profitable, how much capacity you have next month, or what revenue is coming. Your existing data comes with you at setup.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq2" id="faq2-b">Will my team actually use it?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq2" role="region" aria-labelledby="faq2-b">It’s set up around your process, with your data, before anyone logs in. Each role is trained, and sees only what it needs.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq3" id="faq3-b">Is it only for marketing agencies?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq3" role="region" aria-labelledby="faq3-b">It’s built for marketing agencies, digital studios and business consultancies: any team that sells its time on projects and retainers. The wording and setup adapt to how you work.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq4" id="faq4-b">Where is my data, and who can see it?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq4" role="region" aria-labelledby="faq4-b">On your own isolated install, with daily encrypted off-site backups. Inside the system, you decide who sees what.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq5" id="faq5-b">Who can see salaries?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq5" role="region" aria-labelledby="faq5-b">Only the people you allow. Access to money and salaries is set role by role and person by person.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq6" id="faq6-b">Can I leave and take my data?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq6" role="region" aria-labelledby="faq6-b">Yes. Your data is yours, exportable any time to Excel or PDF, and if you leave, we hand over your install and its data.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq7" id="faq7-b">Is it in Arabic?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq7" role="region" aria-labelledby="faq7-b">The interface is in English today. Your content, such as client names, notes and tasks, can be written in Arabic.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq8" id="faq8-b">How long until we’re live?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq8" role="region" aria-labelledby="faq8-b">About four weeks from signing, depending on how quickly your data is ready.</div></div>
+      <div class="qa"><i class="square"></i><h3><button type="button" aria-expanded="false" aria-controls="faq9" id="faq9-b">What does it cost?<span class="pm" aria-hidden="true">+</span></button></h3><div class="a" id="faq9" role="region" aria-labelledby="faq9-b">It’s quoted after a short call, because setup depends on your size and structure. You pay one project fee plus an annual care fee. There is no per-seat subscription.</div></div>
+    </div>
+    <div class="faq-ask">
+      <span>Anything we didn’t cover?</span>
+      <a class="btn btn-line" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I%20have%20a%20question%20about%20the%20agency%20system." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Ask on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="dark final" id="start" aria-labelledby="c-h">
+  <div class="wrap final-grid">
+    <div>
+      <h2 class="display" id="c-h">See your agency in <em class="em">numbers.</em></h2>
+      <p class="lead">30 minutes. We’ll show you the system on a sample agency, then talk through yours. Or look around on your own first.</p>
+      <div class="final-ctas">
+        <a class="btn btn-primary" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo on WhatsApp</a>
+        <a class="btn btn-line" href="demo/">Explore the product</a>
+      </div>
+    </div>
+    <div class="call">
+      <i class="square"></i>
+      <span>What happens on the call</span>
+      <ol>
+        <li><span class="num">01</span><span><b>A live walk-through</b> of the system on a sample agency.</span></li>
+        <li><span class="num">02</span><span><b>Your setup:</b> departments, services and the numbers you want to see.</span></li>
+        <li><span class="num">03</span><span><b>A clear quote</b> and timeline, sent after the call.</span></li>
+      </ol>
+    </div>
   </div>
 </section>
 </main>
 
 <footer class="footer">
-  <div class="container footer-in">
-    <div>
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
       <a class="logo" href="#top"><img src="assets/brand/cosolutions-logo-color.svg" width="149" height="22" alt="Co.Solutions, back to top" loading="lazy"></a>
       <p>Operating systems for agencies and consultancies that run on numbers.</p>
     </div>
-    <nav aria-label="Footer">
-      <a href="demo/">Product tour</a>
-      <a href="privacy.html">Privacy</a>
-      <a data-wa="question" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I%20have%20a%20question%20about%20the%20agency%20system." target="_blank" rel="noopener">WhatsApp</a>
-    </nav>
-    <p class="copyright">© <span data-year>2026</span> Co.Solutions</p>
+    <div class="footer-end">
+      <nav aria-label="Footer"><a href="demo/">Product tour</a><a href="privacy.html">Privacy</a><a href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I%20have%20a%20question%20about%20the%20agency%20system." target="_blank" rel="noopener">WhatsApp</a></nav>
+      <span class="copy">© <span data-year>2026</span> Co.Solutions</span>
+    </div>
   </div>
 </footer>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3Z"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l5 5 9-11"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M14 6l6 6-6 6"/></symbol>
-  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-  <symbol id="i-work" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17"/><path d="M12 7.5V12h4"/></symbol>
-  <symbol id="i-pipeline" viewBox="0 0 24 24"><path d="M4 5.5h16M7 12h10M10 18.5h4"/></symbol>
-  <symbol id="i-finance" viewBox="0 0 24 24"><rect x="3.5" y="6" width="17" height="12"/><path d="M3.5 10.5h17M7 14.5h3"/></symbol>
-  <symbol id="i-insights" viewBox="0 0 24 24"><path d="M3.5 20.5h17M6.5 17v-5M12 17V7M17.5 17v-8"/></symbol>
-  <symbol id="i-agency" viewBox="0 0 24 24"><path d="M4.5 20.5v-17h10v17M14.5 9.5h5v11M3 20.5h18M8 7.5h3M8 11.5h3M8 15.5h3"/></symbol>
-  <symbol id="i-brand" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="11" height="11"/><rect x="9.5" y="9.5" width="11" height="11"/></symbol>
-  <symbol id="i-ops" viewBox="0 0 24 24"><path d="M5.5 3.5h13v17h-13zM9 8.5h6M9 12.5h6M9 16.5h3"/></symbol>
-  <symbol id="i-setup" viewBox="0 0 24 24"><path d="M4 7h9M18 7h2M4 17h2M11 17h9"/><rect x="13" y="4.5" width="5" height="5"/><rect x="6" y="14.5" width="5" height="5"/></symbol>
-  <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10"/><path d="M8 10.5V7a4 4 0 0 1 7.6-1.7"/></symbol>
-  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="7"/><rect x="3.5" y="13.5" width="17" height="7"/><path d="M7 7h2M7 17h2"/></symbol>
-  <symbol id="i-backup" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3L4.5 9M4.5 4v5h5"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v12M7 10.5l5 5 5-5M4 20.5h16"/></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5M12 14.5v2"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3.5h8l4.5 4.5v12.5H6zM14 3.5V8h4.5"/></symbol>
-  <symbol id="i-roles" viewBox="0 0 24 24"><rect x="8.5" y="3.5" width="7" height="7"/><path d="M4.5 20.5v-2a5 5 0 0 1 5-5h5a5 5 0 0 1 5 5v2"/></symbol>
-</svg>
+<div class="mbar" id="mbar" aria-label="Quick actions" role="region">
+  <a class="btn btn-primary" href="https://wa.me/201207548813?text=Hi%20Co.Solutions%2C%20I'd%20like%20a%20demo%20of%20the%20agency%20system." target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 20l1.4-4.2A8 8 0 1 1 8.2 18.6L4 20z"/></svg>Request a demo<span class="sr"> on WhatsApp</span></a>
+  <a class="btn btn-line" href="demo/">Explore the product</a>
+</div>
 
 <script src="assets/site.js" defer></script>
 </body>

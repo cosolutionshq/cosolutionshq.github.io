@@ -9,32 +9,29 @@ Static site published by GitHub Pages at <https://cosolutionshq.github.io/>. Pla
 | `index.html` | The landing page |
 | `privacy.html` | Privacy page |
 | `404.html` | Not-found page |
-| `assets/tokens.css` | Design tokens: colour, type, spacing, radius, elevation, motion |
-| `assets/site.css` | Layout and components, using only the tokens |
-| `assets/site.js` | The only script: WhatsApp links, header, phone menu, accordions, brand switcher, reveal |
-| `assets/fonts/` | Self-hosted fonts (Archivo, Instrument Serif, Geist, IBM Plex Mono) with their OFL licences |
+| `assets/landing.css` | The one stylesheet: tokens (colour, type, space, motion) at the top, then each section |
+| `assets/site.js` | The only script: WhatsApp links, header, phone menu and sticky bar, FAQ, the hero card's cycle, count-ups and chart draws, brand switcher |
+| `assets/fonts/` | Self-hosted fonts with their OFL licences: Archivo, Instrument Serif, Geist, IBM Plex Mono; Outfit and Plus Jakarta Sans only for the two fictional agencies in the white label demo |
 | `assets/screens/web/` | Product screenshots as WebP |
 | `assets/brand/` | Logo, symbol, social sharing image and brand tokens |
 | `assets/fictional-brands/` | Marks of the fictional agencies |
-| `docs/DESIGN.md` | The design system, components and layouts |
+| `docs/DESIGN.md` | Round 1 design notes; round 2 follows the design board "Co.Solutions - Landing Round 2" |
 
-## Design tokens
+## Figures and motion
 
-Every section uses the tokens in `assets/tokens.css`. Change a value there and it changes everywhere:
+Every figure on the page is the interactive tour's (sample agency, October 2026 against September, tour captured
+11 November 2026). When the tour is rebuilt, check the figures in `index.html` against it.
 
-- **Spacing:** `--space-1` to `--space-10`, plus `--section-y`, `--head-gap` and `--card-pad`
-- **Type:** `--text-display`, `--text-h2`, `--text-h3`, `--text-lead`, `--text-body`, `--text-small`, `--text-eyebrow`
-- **Colour:** `--bg`, `--surface`, `--surface-raised`, `--border`, `--text`, `--text-muted`, `--accent`, `--accent-contrast`, `--focus`
-- **Shape:** `--radius-sm`, `--radius-md`, `--radius-lg`, `--shadow-1`, `--shadow-2`
-
-`docs/DESIGN.md` explains how they are used.
+The HTML carries the final value of every number and chart, so no-JS, print, reduced motion and screen readers get the
+final state. `site.js` marks cards that start below the fold, zeroes them, and plays them once when 35% is in view:
+numbers count up (`data-count`), bars grow, heat cells fade in. Motion tokens are at the top of `landing.css`.
 
 ## Change the WhatsApp number
 
 Two places, so the links work with or without JavaScript:
 
 1. `CONFIG.whatsapp` in `assets/site.js` (digits only, with the country code).
-2. The `https://wa.me/...` links in `index.html` and `privacy.html`: find and replace the number.
+2. The `https://wa.me/...` links in `index.html` and `privacy.html`: find and replace the number, so links work without JavaScript too.
 
 ## Preview locally
 
