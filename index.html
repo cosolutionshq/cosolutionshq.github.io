@@ -78,37 +78,42 @@
       <h1 class="display" id="hero-h"><span>Your agency is busy.</span><span>Is it <em class="em">profitable?</em></span></h1>
     </div>
     <div class="hero-cardwrap">
-    <div class="hc-outer" data-hero data-states='[{"name":"Palm Grove Hotels","oct":55,"sep":54.2},{"name":"Azure Dental Clinics","oct":40,"sep":38.8},{"name":"Nile Coffee Roasters","oct":59,"sep":null}]'>
+    <div class="hc-outer" data-hero data-states='[{"name":"Palm Grove Hotels","oct":55,"sep":49.2,"health":"Healthy"},{"name":"Azure Dental Clinics","oct":61,"sep":46.7,"health":"Healthy"},{"name":"Nile Coffee Roasters","oct":68,"sep":null,"health":"Healthy"},{"name":"Atlas Fitness","oct":-9,"sep":61.5,"health":"At risk"}]'>
       <div class="hc-rise">
-      <figure class="hc fam-money" role="group" aria-label="Sample data, fictional agency. Margin on fee earned by client, October 2026 against September: Palm Grove Hotels 55% (54% in September), Azure Dental Clinics 40% (39%), Nile Coffee Roasters 59% (no September margin). Every client is healthy.">
+      <figure class="hc fam-money" role="group" aria-label="Sample data, fictional agency. Margin on fee earned by client, October 2026 against September: Palm Grove Hotels 55% (49.2% in September), Azure Dental Clinics 61% (46.7%), Nile Coffee Roasters 68% (no September margin), Atlas Fitness −9% (61.5%). Atlas Fitness is at risk: losing money in October.">
         <div class="card-head">
           <div class="plate"><span class="eye">Money · Oct 2026 vs Sep</span><span class="title">Margin by client</span></div>
-          <div class="chip"><i class="sq"></i><span class="fig" aria-hidden="true" data-hc-fig>59%</span><span class="cap"><b data-hc-name>Nile Coffee Roasters</b><span>Margin on fee earned</span></span></div>
+          <div class="chip fig-leak" data-hc-chip><i class="sq"></i><span class="fig" aria-hidden="true" data-hc-fig>−9%</span><span class="cap"><b data-hc-name>Atlas Fitness</b><span>Margin on fee earned</span></span></div>
         </div>
         <div class="hc-body" aria-hidden="true">
-          <div class="hc-legend"><span class="hc-keys"><span><i class="key-now"></i>October</span><span><i class="key-was"></i>September, for comparison</span></span><span class="pill">Healthy</span></div>
+          <div class="hc-legend"><span class="hc-keys"><span><i class="key-now"></i>October</span><span><i class="key-was"></i>September, for comparison</span></span><span class="pill is-risk" data-hc-pill>At risk</span></div>
           <div class="hc-row" data-row>
           <span class="name">Palm Grove Hotels</span>
-          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:49.273%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:50.000%"></i><span class="hc-val" style="inset-inline-start:calc(81.818% + 8px)">55%</span></div>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:44.727%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:50.000%"></i><span class="hc-val" style="inset-inline-start:calc(81.818% + 8px)">55%</span></div>
         </div>
           <div class="hc-row" data-row>
           <span class="name">Azure Dental Clinics</span>
-          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:35.273%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:36.364%"></i><span class="hc-val" style="inset-inline-start:calc(68.182% + 8px)">40%</span></div>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:42.455%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:55.455%"></i><span class="hc-val" style="inset-inline-start:calc(87.273% + 8px)">61%</span></div>
+        </div>
+          <div class="hc-row" data-row>
+          <span class="name">Nile Coffee Roasters</span>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost" style="inset-inline-start:31.818%;width:0.000%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:61.818%"></i><span class="hc-val" style="inset-inline-start:calc(93.636% + 8px)">68%</span></div>
         </div>
           <div class="hc-row is-on" data-row>
-          <span class="name">Nile Coffee Roasters</span>
-          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost" style="inset-inline-start:31.818%;width:0.000%"></i><i class="hc-bar" style="inset-inline-start:31.818%;width:53.636%"></i><span class="hc-val" style="inset-inline-start:calc(85.455% + 8px)">59%</span></div>
+          <span class="name">Atlas Fitness</span>
+          <div class="hc-track"><i class="hc-zero"></i><i class="hc-ghost has" style="inset-inline-start:31.818%;width:55.909%"></i><i class="hc-bar neg" style="inset-inline-start:23.636%;width:8.182%"></i><span class="hc-val neg" style="inset-inline-end:calc(76.364% + 8px)">−9%</span></div>
         </div>
           <div class="hc-axis" aria-hidden="true"><span class="sp"></span><div class="hc-ticks"><span class="t-mid" style="inset-inline-start:13.6%">−20</span><span style="inset-inline-start:31.8%">0</span><span class="t-mid" style="inset-inline-start:68.2%">+40</span><span style="inset-inline-start:86.4%">+60%</span></div></div>
         </div>
         <div class="card-foot"><span class="note">Sample data · fictional agency</span><a href="demo/admin/insights/clients">Open Clients <span class="arr" aria-hidden="true">→</span></a></div>
       </figure>
-      <div class="callout is-on" data-callout aria-hidden="true"><i class="square"></i><b>Every client healthy in October</b><span>Checked every month, not at year end.</span></div>
+      <div class="callout is-on" data-callout aria-hidden="true"><i class="square"></i><b>Atlas Fitness slipped into loss</b><span>From 61% in September to −9% in October. Seen the month it happened.</span></div>
       </div>
       <div class="segs" role="group" aria-label="Sample clients">
         <button type="button" class="seg" aria-pressed="false" data-seg="0"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Palm Grove Hotels</span></button>
         <button type="button" class="seg" aria-pressed="false" data-seg="1"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Azure Dental Clinics</span></button>
-        <button type="button" class="seg" aria-pressed="true" data-seg="2"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Nile Coffee Roasters</span></button>
+        <button type="button" class="seg" aria-pressed="false" data-seg="2"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Nile Coffee Roasters</span></button>
+        <button type="button" class="seg" aria-pressed="true" data-seg="3"><span class="seg-bar"><i style="width:100%"></i></span><span class="seg-name">Atlas Fitness</span></button>
       </div>
     </div>
     </div>
@@ -144,27 +149,27 @@
     <div class="answer-head">
       <h3><span class="num">01</span><span>Which client makes you the most money, and which one costs you money?</span></h3>
       <p class="answer-title">See what each client is really worth.</p>
-      <div class="sample"><span class="k">In the sample agency</span><p><b>Palm Grove Hotels</b> brings in the most: 39,864 USD, 52% of October’s fees. <b>Azure Dental Clinics</b> earns the least per hour: 143 USD, at a 40% margin.</p></div>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>Palm Grove Hotels</b> brings in the most: 40,000 USD, 49% of October’s fees. <b>Atlas Fitness</b> cost money: 152 hours for 11,506 USD earned, a margin of −9%, with nothing collected.</p></div>
     </div>
     <div class="answer-card">
-        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. Palm Grove Hotels is 52% of October fee earned, against a target of at most 60%; the top three clients are 97%. Effective rate 199 USD an hour against a target of 105; Azure Dental Clinics, the lowest, 143 USD an hour at a margin of 40%.">
+        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. Palm Grove Hotels is 49% of October fee earned, against a target of at most 60%; the top three clients are 86%. Effective rate 183 USD an hour against a target of 105; Atlas Fitness, the lowest, 76 USD an hour at a margin of −9%.">
           <div class="card-head">
             <div class="plate"><span class="eye">Money · Oct 2026, by client</span><span class="title">Client scorecard</span></div>
-            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="52" data-dec="0" data-pre="" data-suf="%" style="--i:0">52%</span></span><span class="cap"><b>Biggest client’s share</b><span>Palm Grove Hotels · target 60%</span></span></div>
+            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="49" data-dec="0" data-pre="" data-suf="%" style="--i:0">49%</span></span><span class="cap"><b>Biggest client’s share</b><span>Palm Grove Hotels · target 60%</span></span></div>
           </div>
           <div class="ex-body ex-clients" aria-hidden="true">
             <div>
               <span class="ex-k">Share of October’s fee earned</span>
-              <div class="share"><i class="top3 bar" style="width:97%"></i><i class="base bar" style="width:52%;--i:2"></i><i class="limit" style="inset-inline-start:60%"></i><span class="limit-l" style="inset-inline-start:60%">Target at most 60%</span></div>
-              <div class="share-labels"><span><b>Palm Grove Hotels</b><span class="num" data-count="52" data-dec="0" data-pre="" data-suf="%" style="--i:0">52%</span></span><span><b>Top three</b><span class="num" data-count="97" data-dec="0" data-pre="" data-suf="%" style="--i:1">97%</span></span></div>
+              <div class="share"><i class="top3 bar" style="width:86%"></i><i class="base bar" style="width:49%;--i:2"></i><i class="limit" style="inset-inline-start:60%"></i><span class="limit-l" style="inset-inline-start:60%">Target at most 60%</span></div>
+              <div class="share-labels"><span><b>Palm Grove Hotels</b><span class="num" data-count="49" data-dec="0" data-pre="" data-suf="%" style="--i:0">49%</span></span><span><b>Top three</b><span class="num" data-count="86" data-dec="0" data-pre="" data-suf="%" style="--i:1">86%</span></span></div>
             </div>
             <div>
               <span class="ex-k">Effective rate, USD an hour</span>
               <div class="rates">
                 <span class="lbl">Agency average</span>
-                <div class="hbar"><i class="bar" style="width:71.196%;--i:1"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v" style="inset-inline-start:71.196%"><span class="num" data-count="199" data-dec="0" data-pre="" data-suf="" style="--i:1">199</span></span></div>
-                <span class="lbl"><b>Azure Dental Clinics</b></span>
-                <div class="hbar"><i class="bar" style="width:51.021%;--i:2"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v" style="inset-inline-start:51.021%"><span class="num" data-count="143" data-dec="0" data-pre="" data-suf="" style="--i:2">143</span> · margin <span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:2">40%</span></span></div>
+                <div class="hbar"><i class="bar" style="width:65.186%;--i:1"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v" style="inset-inline-start:65.186%"><span class="num" data-count="183" data-dec="0" data-pre="" data-suf="" style="--i:1">183</span></span></div>
+                <span class="lbl"><b>Atlas Fitness</b></span>
+                <div class="hbar"><i class="bar c-leak" style="width:27.125%;--i:2"></i><i class="tgt" style="inset-inline-start:37.5%"></i><span class="v t-leak" style="inset-inline-start:27.125%"><span class="num" data-count="76" data-dec="0" data-pre="" data-suf="" style="--i:2">76</span> · margin <span class="num" data-count="9" data-dec="0" data-pre="−" data-suf="%" style="--i:2">−9%</span></span></div>
                 <span></span><span class="tl" style="padding-inline-start:calc(37.5% - 40px)">Target 105</span>
               </div>
             </div>
@@ -182,10 +187,10 @@
     <div class="answer-head">
       <h3><span class="num">02</span><span>How much did revisions and rework cost you last month?</span></h3>
       <p class="answer-title">See where profit leaks.</p>
-      <div class="sample"><span class="k">In the sample agency</span><p><b>16K USD</b>, 23% of revenue, went to work nobody paid for. Almost all of it, <b>14K USD</b>, was paid time that sat idle.</p></div>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>16K USD</b>, 23% of revenue, went to work nobody paid for. The biggest leak, <b>14K USD</b>, was paid time that sat idle. Extra revision rounds came second, at <b>2.7K USD</b>.</p></div>
     </div>
     <div class="answer-card">
-        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. October 2026: revenue collected 70K USD, net profit 13K USD. Leaks 16K USD, 23% of revenue: idle paid capacity 14K, internal time over allowance 2.2K; over-used projects and extra revisions nothing.">
+        <figure class="excerpt fam-money" data-anim-card role="figure" aria-label="Sample data. October 2026: revenue collected 70K USD, net profit 13K USD. Leaks 16K USD, 23% of revenue: idle paid capacity 14K, extra revisions 2.7K; over-used projects and internal time over allowance nothing.">
           <div class="card-head">
             <div class="plate"><span class="eye">Money · Oct 2026, cash basis</span><span class="title">Revenue to net profit</span></div>
             <div class="chip fig-leak" style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="16" data-dec="0" data-pre="" data-suf="K" style="--i:0">16K</span></span><span class="cap"><b>USD leaked, 23% of revenue</b><span>target at most 25%</span></span></div>
@@ -194,10 +199,10 @@
             <div class="wf">
               <div class="wf-row strong"><span class="lbl">Revenue collected</span><div class="wf-track"><i class="bar c-sol" style="inset-inline-start:0%;width:97.222%;--i:0;"></i><span class="v t-sol" style="inset-inline-start:97.222%"><span class="num" data-count="70" data-dec="0" data-pre="" data-suf="K" style="--i:0">70K</span></span></div></div>
               <div class="wf-row"><span class="lbl">Project costs and supplier bills</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:88.194%;width:9.028%;--i:1;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:97.222%"><span class="num" data-count="6.5" data-dec="1" data-pre="−" data-suf="K" style="--i:1">−6.5K</span></span></div></div>
-              <div class="wf-row"><span class="lbl">Payroll on paid work</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:51.057%;width:37.137%;--i:2;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:88.194%"><span class="num" data-count="27" data-dec="0" data-pre="−" data-suf="K" style="--i:2">−27K</span></span></div></div>
-              <div class="wf-row leak"><span class="lbl">Over-used projects</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:51.057%;width:0%;--i:3;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:3">0</span></span></div></div>
-              <div class="wf-row leak"><span class="lbl">Extra revisions</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:51.057%;width:0%;--i:4;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:4">0</span></span></div></div>
-              <div class="wf-row leak"><span class="lbl">Internal time over allowance</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:48.007%;width:3.05%;--i:5;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.057%"><span class="num" data-count="2.2" data-dec="1" data-pre="−" data-suf="K" style="--i:5">−2.2K</span></span></div></div>
+              <div class="wf-row"><span class="lbl">Payroll on paid work</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:51.703%;width:36.492%;--i:2;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:88.194%"><span class="num" data-count="26" data-dec="0" data-pre="−" data-suf="K" style="--i:2">−26K</span></span></div></div>
+              <div class="wf-row leak"><span class="lbl">Over-used projects</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:51.703%;width:0%;--i:3;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.703%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:3">0</span></span></div></div>
+              <div class="wf-row leak strong"><span class="lbl">Extra revisions</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:48.007%;width:3.696%;--i:4;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:51.703%"><span class="num" data-count="2.7" data-dec="1" data-pre="−" data-suf="K" style="--i:4">−2.7K</span></span></div></div>
+              <div class="wf-row leak"><span class="lbl">Internal time over allowance</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:48.007%;width:0%;--i:5;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:48.007%"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:5">0</span></span></div></div>
               <div class="wf-row leak strong"><span class="lbl">Idle paid capacity</span><div class="wf-track"><i class="bar c-leak" style="inset-inline-start:29.132%;width:18.875%;--i:6;--from:right;--from-rtl:left"></i><span class="v t-leak" style="inset-inline-start:48.007%"><span class="num" data-count="14" data-dec="0" data-pre="−" data-suf="K" style="--i:6">−14K</span></span></div></div>
               <div class="wf-row"><span class="lbl">Running costs</span><div class="wf-track"><i class="bar c-cost" style="inset-inline-start:18.715%;width:10.417%;--i:7;--from:right;--from-rtl:left"></i><span class="v t-cost" style="inset-inline-start:29.132%"><span class="num" data-count="7.5" data-dec="1" data-pre="−" data-suf="K" style="--i:7">−7.5K</span></span></div></div>
               <div class="wf-row strong"><span class="lbl">Net profit</span><div class="wf-track"><i class="bar c-sol" style="inset-inline-start:0%;width:18.715%;--i:8;"></i><span class="v t-sol" style="inset-inline-start:18.715%"><span class="num" data-count="13" data-dec="0" data-pre="" data-suf="K" style="--i:8">13K</span></span></div></div>
@@ -217,26 +222,26 @@
     <div class="answer-head">
       <h3><span class="num">03</span><span>Can you take on a new client next month without burning out the team?</span></h3>
       <p class="answer-title">Know your capacity before you say yes.</p>
-      <div class="sample"><span class="k">In the sample agency</span><p><b>Yes.</b> Nobody is above 90% of their capacity, and the next 12 weeks are booked to 16%, 39% with likely deals.</p></div>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>Not in Creative.</b> Two designers, Mona Farid and Hany Samir, are booked to 108% and 105% in the week of 30 November, and Creative is short 64 hours over the next 8 weeks. Marketing has room.</p></div>
     </div>
     <div class="answer-card">
-        <figure class="excerpt fam-people" data-anim-card role="figure" aria-label="Sample data. Nobody is above 90% of their capacity, and utilisation was 78% in October. Booked hours as a share of each person's capacity, weeks 46 to 53: Hany Samir 56% then 26%; Karim Adel 0%, 30% and 4%; Mona Farid 19% and 4%; Sara Nabil 6% and 30%; Youssef Amin 38% and 19%; nothing booked after that yet.">
+        <figure class="excerpt fam-people" data-anim-card role="figure" aria-label="Sample data. Two designers are booked above their capacity in the week of 30 November: Mona Farid 108% and Hany Samir 105%, both in Creative. Booked hours as a share of each person's capacity, weeks 47 to 1: Hany Samir 56%, 96%, 105% and 95%; Karim Adel 8% and 23%; Mona Farid 19%, 95%, 108% and 93%; Sara Nabil 30% and 19%; Youssef Amin 19% and 4%; nothing booked after that yet.">
           <div class="card-head">
-            <div class="plate"><span class="eye">People · weeks 46–53, from today</span><span class="title">Who is loaded, week by week</span></div>
-            <div class="chip " style="--fig-w:2ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:0">0</span></span><span class="cap"><b>People above 90%</b><span>of 5 · utilisation 78%</span></span></div>
+            <div class="plate"><span class="eye">People · the next 8 weeks</span><span class="title">Who is loaded, week by week</span></div>
+            <div class="chip fig-leak" style="--fig-w:4ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="108" data-dec="0" data-pre="" data-suf="%" style="--i:0">108%</span></span><span class="cap"><b>Highest week</b><span>Mona Farid · week of 30 Nov</span></span></div>
           </div>
           <div class="ex-body" aria-hidden="true">
             <div class="hm-top"><span class="ex-k">Booked hours as a share of each person’s capacity</span><span class="note">5 people</span></div>
             <div class="hm">
-                <span></span><span class="wk">W46*</span><span class="wk">W47</span><span class="wk">W48</span><span class="wk">W49</span><span class="wk">W50</span><span class="wk">W51</span><span class="wk">W52</span><span class="wk">W53</span>
-                <span class="who"><b>Hany Samir</b><span>Creative</span></span><span class="cell" style="--i:0"><span class="num" data-count="56" data-dec="0" data-pre="" data-suf="" style="--i:0">56</span><span class="pc">%</span></span><span class="cell" style="--i:1"><span class="num" data-count="26" data-dec="0" data-pre="" data-suf="" style="--i:1">26</span><span class="pc">%</span></span><span class="cell none" style="--i:2"></span><span class="cell none" style="--i:3"></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span>
-                <span class="who"><b>Karim Adel</b><span>Marketing</span></span><span class="cell" style="--i:1"><span class="num" data-count="0" data-dec="0" data-pre="" data-suf="" style="--i:1">0</span><span class="pc">%</span></span><span class="cell" style="--i:2"><span class="num" data-count="30" data-dec="0" data-pre="" data-suf="" style="--i:2">30</span><span class="pc">%</span></span><span class="cell" style="--i:3"><span class="num" data-count="4" data-dec="0" data-pre="" data-suf="" style="--i:3">4</span><span class="pc">%</span></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span>
-                <span class="who"><b>Mona Farid</b><span>Creative</span></span><span class="cell" style="--i:2"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:2">19</span><span class="pc">%</span></span><span class="cell" style="--i:3"><span class="num" data-count="4" data-dec="0" data-pre="" data-suf="" style="--i:3">4</span><span class="pc">%</span></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span>
-                <span class="who"><b>Sara Nabil</b><span>Marketing</span></span><span class="cell" style="--i:3"><span class="num" data-count="6" data-dec="0" data-pre="" data-suf="" style="--i:3">6</span><span class="pc">%</span></span><span class="cell" style="--i:4"><span class="num" data-count="30" data-dec="0" data-pre="" data-suf="" style="--i:4">30</span><span class="pc">%</span></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span>
-                <span class="who"><b>Youssef Amin</b><span>Marketing</span></span><span class="cell" style="--i:4"><span class="num" data-count="38" data-dec="0" data-pre="" data-suf="" style="--i:4">38</span><span class="pc">%</span></span><span class="cell" style="--i:5"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:5">19</span><span class="pc">%</span></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span><span class="cell none" style="--i:11"></span>
+                <span></span><span class="wk">W47</span><span class="wk">W48</span><span class="wk">W49</span><span class="wk">W50</span><span class="wk">W51</span><span class="wk">W52</span><span class="wk">W53</span><span class="wk">W1</span>
+                <span class="who"><b>Hany Samir</b><span>Creative</span></span><span class="cell" style="--i:0"><span class="num" data-count="56" data-dec="0" data-pre="" data-suf="" style="--i:0">56</span><span class="pc">%</span></span><span class="cell b-over" style="--i:1"><span class="num" data-count="96" data-dec="0" data-pre="" data-suf="" style="--i:1">96</span><span class="pc">%</span></span><span class="cell b-beyond" style="--i:2"><span class="num" data-count="105" data-dec="0" data-pre="" data-suf="" style="--i:2">105</span><span class="pc">%</span></span><span class="cell b-over" style="--i:3"><span class="num" data-count="95" data-dec="0" data-pre="" data-suf="" style="--i:3">95</span><span class="pc">%</span></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span>
+                <span class="who"><b>Karim Adel</b><span>Marketing</span></span><span class="cell" style="--i:1"><span class="num" data-count="8" data-dec="0" data-pre="" data-suf="" style="--i:1">8</span><span class="pc">%</span></span><span class="cell" style="--i:2"><span class="num" data-count="23" data-dec="0" data-pre="" data-suf="" style="--i:2">23</span><span class="pc">%</span></span><span class="cell none" style="--i:3"></span><span class="cell none" style="--i:4"></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span>
+                <span class="who"><b>Mona Farid</b><span>Creative</span></span><span class="cell" style="--i:2"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:2">19</span><span class="pc">%</span></span><span class="cell b-over" style="--i:3"><span class="num" data-count="95" data-dec="0" data-pre="" data-suf="" style="--i:3">95</span><span class="pc">%</span></span><span class="cell b-beyond" style="--i:4"><span class="num" data-count="108" data-dec="0" data-pre="" data-suf="" style="--i:4">108</span><span class="pc">%</span></span><span class="cell b-over" style="--i:5"><span class="num" data-count="93" data-dec="0" data-pre="" data-suf="" style="--i:5">93</span><span class="pc">%</span></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span>
+                <span class="who"><b>Sara Nabil</b><span>Marketing</span></span><span class="cell" style="--i:3"><span class="num" data-count="30" data-dec="0" data-pre="" data-suf="" style="--i:3">30</span><span class="pc">%</span></span><span class="cell" style="--i:4"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:4">19</span><span class="pc">%</span></span><span class="cell none" style="--i:5"></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span>
+                <span class="who"><b>Youssef Amin</b><span>Marketing</span></span><span class="cell" style="--i:4"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="" style="--i:4">19</span><span class="pc">%</span></span><span class="cell" style="--i:5"><span class="num" data-count="4" data-dec="0" data-pre="" data-suf="" style="--i:5">4</span><span class="pc">%</span></span><span class="cell none" style="--i:6"></span><span class="cell none" style="--i:7"></span><span class="cell none" style="--i:8"></span><span class="cell none" style="--i:9"></span><span class="cell none" style="--i:10"></span><span class="cell none" style="--i:11"></span>
             </div>
             <div class="band-legend"><span style="background:#F1F5F5;color:#3E4E52">Under 65%</span><span style="background:oklch(0.95 0.02 320)">65–80%</span><span style="background:oklch(0.87 0.05 320)">To 90%</span><span style="background:oklch(0.74 0.09 320)">To 100%</span><span style="background:#B4532A;color:#FFFFFF">Over 100%</span></div>
-            <p class="hm-note">* This week counts from today. A blank week has nothing booked yet.</p>
+            <p class="hm-note">W49 (30 Nov–4 Dec) is a short week: 16 hours each. A blank week has nothing booked yet.</p>
           </div>
           <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="note">Insights › Capacity</span></div>
         </figure>
@@ -257,7 +262,7 @@
         <figure class="excerpt fam-pipe" data-anim-card role="figure" aria-label="Sample data. Weighted forecast 34K USD from 2 deals: 19K in November, 15K in December, nothing yet from January to April. All six months fall short of the 55K USD monthly target.">
           <div class="card-head">
             <div class="plate"><span class="eye">Pipeline · next 6 months, weighted</span><span class="title">Revenue forecast</span></div>
-            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="34" data-dec="0" data-pre="" data-suf="K" style="--i:0">34K</span></span><span class="cap"><b>USD weighted, from 2 deals</b><span>90K open · win rate 83%</span></span></div>
+            <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="34" data-dec="0" data-pre="" data-suf="K" style="--i:0">34K</span></span><span class="cap"><b>USD weighted, from 2 deals</b><span>90K open · win rate 86%</span></span></div>
           </div>
           <div class="ex-body" aria-hidden="true">
             <div class="fc"><i class="fc-target"></i><span class="fc-target-l">Target 55K a month</span><div class="fc-cols"><div class="fc-col"><i class="fc-short fade" style="--i:2"></i><i class="bar c-contract" style="height:30.20%;--i:0"></i><span class="v" style="bottom:30.20%"><span class="num" data-count="19" data-dec="0" data-pre="" data-suf="K" style="--i:0">19K</span></span></div><div class="fc-col"><i class="fc-short fade" style="--i:3"></i><i class="bar c-proposal" style="height:23.59%;--i:1"></i><span class="v" style="bottom:23.59%"><span class="num" data-count="15" data-dec="0" data-pre="" data-suf="K" style="--i:1">15K</span></span></div><div class="fc-col"><i class="fc-short fade" style="--i:4"></i><span class="fc-short-l fade" style="--i:4">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:5"></i><span class="fc-short-l fade" style="--i:5">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:6"></i><span class="fc-short-l fade" style="--i:6">short</span></div><div class="fc-col"><i class="fc-short fade" style="--i:7"></i><span class="fc-short-l fade" style="--i:7">short</span></div></div></div>
@@ -278,10 +283,10 @@
     <div class="answer-head">
       <h3><span class="num">05</span><span>Where is late work stuck, and who is it waiting on?</span></h3>
       <p class="answer-title">See where work waits.</p>
-      <div class="sample"><span class="k">In the sample agency</span><p><b>In progress.</b> 1 of 16 tasks was late, and work spent 7.9 working days in progress against 1.9 in review. None went through client review.</p></div>
+      <div class="sample"><span class="k">In the sample agency</span><p><b>In progress.</b> 1 of 16 tasks was late in October, and 2 open tasks are past their due date. Work spent 9.1 working days in progress against 2.1 in review; none went through client review.</p></div>
     </div>
     <div class="answer-card">
-        <figure class="excerpt fam-time" data-anim-card role="figure" aria-label="Sample data. On-time delivery 94% against a target of 85%; 1 of 16 tasks late. Working days a task sits at each stage: in progress 7.9, in review 1.9; no task went through client review.">
+        <figure class="excerpt fam-time" data-anim-card role="figure" aria-label="Sample data. On-time delivery 94% against a target of 85%; 1 of 16 tasks late. Working days a task sits at each stage: in progress 9.1, in review 2.1; no task went through client review.">
           <div class="card-head">
             <div class="plate"><span class="eye">Delivery · Oct 2026, approved tasks</span><span class="title">Where work waits</span></div>
             <div class="chip " style="--fig-w:3ch"><i class="sq"></i><span class="fig" aria-hidden="true"><span class="num" data-count="94" data-dec="0" data-pre="" data-suf="%" style="--i:0">94%</span></span><span class="cap"><b>On-time delivery</b><span>1 of 16 late · target 85%</span></span></div>
@@ -289,8 +294,8 @@
           <div class="ex-body" aria-hidden="true">
             <span class="ex-k">Working days a task sits at each stage</span>
             <div class="dl">
-              <span class="lbl">In progress</span><div class="dl-track"><i class="bar" style="width:79.1%"></i><span class="v" style="inset-inline-start:79.1%"><span class="num" data-count="7.9" data-dec="1" data-pre="" data-suf="" style="--i:0">7.9</span></span></div>
-              <span class="lbl">In review</span><div class="dl-track"><i class="bar" style="width:19.2%;--i:1"></i><span class="v" style="inset-inline-start:19.2%"><span class="num" data-count="1.9" data-dec="1" data-pre="" data-suf="" style="--i:1">1.9</span></span></div>
+              <span class="lbl">In progress</span><div class="dl-track"><i class="bar" style="width:91%"></i><span class="v" style="inset-inline-start:91%"><span class="num" data-count="9.1" data-dec="1" data-pre="" data-suf="" style="--i:0">9.1</span></span></div>
+              <span class="lbl">In review</span><div class="dl-track"><i class="bar" style="width:21%;--i:1"></i><span class="v" style="inset-inline-start:21%"><span class="num" data-count="2.1" data-dec="1" data-pre="" data-suf="" style="--i:1">2.1</span></span></div>
               <span class="lbl">Client review</span><div class="dl-track"><span class="dl-none">— no task went through it</span></div>
             </div>
             <div class="dl-axis"><span></span><div><span style="inset-inline-start:0">0</span><span style="inset-inline-start:20%">2</span><span style="inset-inline-start:40%">4</span><span style="inset-inline-start:60%">6</span><span style="inset-inline-start:80%">8</span><span style="inset-inline-end:0">10 days</span></div></div>
@@ -351,7 +356,7 @@
           </div>
           <span class="wl-desc" aria-live="polite" data-wl-desc>Social & content agency, Cairo</span>
         </div>
-        <div class="wl-frame" data-anim-card role="figure" aria-label="The same Pulse screen and sample data in the chosen agency's colours, typeface and logo: margin on fee earned by client, October 2026, Palm Grove Hotels 55%, Azure Dental Clinics 40%, Nile Coffee Roasters 59%.">
+        <div class="wl-frame" data-anim-card role="figure" aria-label="The same Pulse screen and sample data in the chosen agency's colours, typeface and logo: margin on fee earned by client, October 2026, Palm Grove Hotels 55%, Azure Dental Clinics 61%, Nile Coffee Roasters 68%, Atlas Fitness −9%.">
           <div class="wl-strip">
             <div class="wl-logos"><img class="is-on" data-logo="saffron" src="assets/fictional-brands/saffronlane-logo.svg" alt="Saffron Lane" width="200" height="40" loading="lazy"><img class="" data-logo="tessera" src="assets/fictional-brands/tessera-logo.svg" alt="" width="200" height="40" loading="lazy"><img class="cos " data-logo="cos" src="assets/brand/cosolutions-logo-color.svg" alt="" width="200" height="40" loading="lazy"></div>
             <span class="wl-domain"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-wl-domain>erp.saffronlane.com</span></span>
@@ -361,12 +366,13 @@
             <div class="wl-card">
               <div class="card-head">
                 <div class="plate"><span class="eye">Money · Oct 2026 vs Sep</span><span class="title">Margin by client</span></div>
-                <div class="chip" style="--fig-w:4.1ch"><i class="sq"></i><span class="fig"><span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:2">40%</span></span><span class="cap"><b>Azure Dental Clinics</b><span>Margin on fee earned</span></span></div>
+                <div class="chip" style="--fig-w:4.1ch"><i class="sq"></i><span class="fig"><span class="num" data-count="61" data-dec="0" data-pre="" data-suf="%" style="--i:2">61%</span></span><span class="cap"><b>Azure Dental Clinics</b><span>Margin on fee earned</span></span></div>
               </div>
               <div class="hc-body">
                 <div class="hc-row"><span class="name">Palm Grove Hotels</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:50.000%;--i:0"></i><span class="hc-val" style="inset-inline-start:calc(81.818% + 8px)"><span class="num" data-count="55" data-dec="0" data-pre="" data-suf="%" style="--i:0">55%</span></span></div></div>
-                <div class="hc-row is-on"><span class="name">Azure Dental Clinics</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:36.364%;--i:1"></i><span class="hc-val" style="inset-inline-start:calc(68.182% + 8px)"><span class="num" data-count="40" data-dec="0" data-pre="" data-suf="%" style="--i:1">40%</span></span></div></div>
-                <div class="hc-row"><span class="name">Nile Coffee Roasters</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:53.636%;--i:2"></i><span class="hc-val" style="inset-inline-start:calc(85.455% + 8px)"><span class="num" data-count="59" data-dec="0" data-pre="" data-suf="%" style="--i:2">59%</span></span></div></div>
+                <div class="hc-row is-on"><span class="name">Azure Dental Clinics</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:55.455%;--i:1"></i><span class="hc-val" style="inset-inline-start:calc(87.273% + 8px)"><span class="num" data-count="61" data-dec="0" data-pre="" data-suf="%" style="--i:1">61%</span></span></div></div>
+                <div class="hc-row"><span class="name">Nile Coffee Roasters</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar bar" style="inset-inline-start:31.818%;width:61.818%;--i:2"></i><span class="hc-val" style="inset-inline-start:calc(93.636% + 8px)"><span class="num" data-count="68" data-dec="0" data-pre="" data-suf="%" style="--i:2">68%</span></span></div></div>
+                <div class="hc-row"><span class="name">Atlas Fitness</span><div class="hc-track"><i class="hc-zero"></i><i class="hc-bar neg bar" style="inset-inline-start:23.636%;width:8.182%;--i:3;--from:right;--from-rtl:left"></i><span class="hc-val neg" style="inset-inline-end:calc(76.364% + 8px)"><span class="num" data-count="9" data-dec="0" data-pre="−" data-suf="%" style="--i:3">−9%</span></span></div></div>
               </div>
               <div class="card-foot"><span class="note">Sample data · fictional agency</span><span class="go">Open Clients <span class="arr" aria-hidden="true">→</span></span></div>
             </div>

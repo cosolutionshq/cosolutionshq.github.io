@@ -20,7 +20,7 @@ Static site published by GitHub Pages at <https://cosolutionshq.github.io/>. Pla
 ## Figures and motion
 
 Every figure on the page is the interactive tour's (sample agency, October 2026 against September, tour captured
-11 November 2026). When the tour is rebuilt, check the figures in `index.html` against it.
+15 November 2026). When the tour is rebuilt, check the figures in `index.html` against it.
 
 The HTML carries the final value of every number and chart, so no-JS, print, reduced motion and screen readers get the
 final state. `site.js` marks cards that start below the fold, zeroes them, and plays them once when 35% is in view:

@@ -134,21 +134,29 @@ const CONFIG = {
     const S = JSON.parse(hero.dataset.states);
     const rows = $$('[data-row]', hero), segs = $$('[data-seg]', hero);
     const fig = $('[data-hc-fig]', hero), name = $('[data-hc-name]', hero), callout = $('[data-callout]', hero);
+    const chip = $('[data-hc-chip]', hero), pill = $('[data-hc-pill]', hero);
     const P = (x) => (x + 35) / 110 * 100;
+    const pc = (x) => { const r = Math.round(x); return (r < 0 ? '−' : '') + Math.abs(r) + '%'; }; // a true minus sign
     const draw = (idx, v) => {
       rows.forEach((row, j) => {
         const x = j === idx ? v : S[j].oct;
         const bar = $('.hc-bar', row), val = $('.hc-val', row), ghost = $('.hc-ghost', row);
-        const s = P(Math.min(0, x)), w = Math.abs(x) / 110 * 100;
+        const s = P(Math.min(0, x)), w = Math.abs(x) / 110 * 100, neg = x < 0;
         bar.style.insetInlineStart = s + '%';
         bar.style.width = w + '%';
-        val.style.insetInlineStart = `calc(${s + w}% + 8px)`;
-        val.textContent = Math.round(x) + '%';
+        // A loss grows left of zero; its value sits on its left.
+        val.style.insetInlineStart = neg ? 'auto' : `calc(${s + w}% + 8px)`;
+        val.style.insetInlineEnd = neg ? `calc(${100 - s}% + 8px)` : 'auto';
+        bar.classList.toggle('neg', neg);
+        val.classList.toggle('neg', neg);
+        val.textContent = pc(x);
         row.classList.toggle('is-on', j === idx);
         if (S[j].sep != null) { ghost.style.width = (S[j].sep / 110 * 100) + '%'; }
       });
-      fig.textContent = Math.round(v) + '%';
+      fig.textContent = pc(v);
       name.textContent = S[idx].name;
+      if (chip) chip.classList.toggle('fig-leak', v < 0);
+      if (pill && S[idx].health) { pill.textContent = S[idx].health; pill.classList.toggle('is-risk', S[idx].health !== 'Healthy'); }
       segs.forEach((b, j) => b.setAttribute('aria-pressed', String(j === idx)));
     };
     const fill = (idx, prog) => segs.forEach((b, j) => { $('.seg-bar i', b).style.width = (j < idx ? 100 : j === idx ? prog * 100 : 0) + '%'; });
